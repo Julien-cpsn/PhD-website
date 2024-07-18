@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.coursesSidebar.category.PHP 🐘": {
+    "message": "PHP 🐘",
+    "description": "The label for category PHP 🐘 in sidebar coursesSidebar"
+  }
+}

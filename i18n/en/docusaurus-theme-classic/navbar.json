@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "Julien C.",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "My logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Cours": {
+    "message": "Courses",
+    "description": "Navbar item with label Cours"
+  },
+  "item.label.Blog": {
+    "message": "Blog",
+    "description": "Navbar item with label Blog"
+  }
+}

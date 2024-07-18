@@ -1,0 +1,26 @@
+{
+  "link.title.Cours": {
+    "message": "Courses",
+    "description": "The title of the footer links column with title=Cours in the footer"
+  },
+  "link.title.Social": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Social in the footer"
+  },
+  "link.title.Autres": {
+    "message": "More",
+    "description": "The title of the footer links column with title=Autres in the footer"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/Julien-cpsn/"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "copyright": {
+    "message": "Copyright © 2024 PhD Website, Inc. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
