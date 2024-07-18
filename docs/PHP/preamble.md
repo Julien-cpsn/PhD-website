@@ -20,7 +20,7 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 
 - Gérer un formulaire
 
-## Séance 5
+### Séance 5
 
 - Introduction à Laravel
 - Créer et comprendre un projet Laravel

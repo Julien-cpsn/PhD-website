@@ -56,15 +56,15 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          routeBasePath: "courses"
+          editUrl: 'https://github.com/Julien-cpsn/PhD-website/tree/main/',
+          routeBasePath: "courses",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Julien-cpsn/PhD-website/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
