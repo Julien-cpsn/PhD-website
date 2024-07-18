@@ -47,3 +47,7 @@
 .github-link:hover::before {
   background-color: var(--ifm-navbar-link-hover-color);
 }
+
+article p {
+  text-align: justify;
+}

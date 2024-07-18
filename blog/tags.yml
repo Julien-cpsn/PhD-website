@@ -1,4 +1,4 @@
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+publication:
+  label: Publication
+  permalink: /publications
+  description: Mes publications
