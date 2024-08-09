@@ -11,19 +11,78 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 > :::warning
 > Les versions de PHP et Laravel utilisées sont respectivement : **PHP 8.2** et **Laravel 11**
 
-### Séance 1
+### Séance 1 - Introduction
 
+- Présentation de la matière et des objectifs
 - Introduction à PHP
-- Premiers scripts
+- TD 1 : Premiers scripts
+- Fonctions utilitaires & autres outils
+- TD 2 : XXXXXX
 
-### Séance 2
+### Séance 2 - Front-end
 
-- Gérer un formulaire
+- Introduction aux concepts de stack WEB (front-end, back-end, base-de-données), rendu côté serveur (SSR) et au protocole HTTP(S)
+- TP : Gérer un formulaire
+- TP : Page de profil utilisateur
 
-### Séance 5
+### Séance 3 - Back-end 
 
-- Introduction à Laravel
-- Créer et comprendre un projet Laravel
+- Introduction aux concepts d'API
+- TP : Serveur HTTP basique
+  - Routing
+
+### Séance 4 - Intéraction base-de-données
+
+- Introduction à PDO et au concept d'ORM
+- TP : Requêtes basiques et mini-ORM
+
+### Séance 5 - Introduction à la sécurité
+
+- Introduction à la cyber-sécurité (injection SQL, XSS, man in the middle, DDoS)
+- TP : Challenges "root-me" like
+  - Tag (simple) -> mdp dans une balise
+  - Guess the password (simple) -> le mdp c'est "admin"
+  - All Routes Lead To Rome (simple) -> trouver mdp dans le fichier "Rome" grâce à l'URL `http://monserv/get_file?filename=../../Rome`
+  - Botox injection (medium) -> Injection SQL
+  - XSS (medium)  -> Attaque XSS
+  - Decrypt me (medium) -> Décoder du base64
+  - MitM (hard) -> Truc style voler un token via wireshark
+
+### Séance 6 - Framework
+
+- Introduction au concept de framework
+- TP : Créer son propre framework minimaliste en assemblant les parties précédentes
+  - Features attendues :
+    - Routing
+    - Moteur de templating
+    - Mini-ORM
+    - Configuration utilisateur (host, port, bdd)
+  - Le moins de failles de sécurité possible
+
+### Séance 7 - Laravel 
+
+- Introduction à Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), présentation de la documentation et de l'écosystème
+- Mini exposé : Chaque élève présente un élément de l'écosystème Laravel (description, exemples d'usage, complexité, popularité, prix, fiabilité)
+- Introduction au concept de package manager et composer
+- TP : Création d'un projet Laravel vide
+
+### Séance 8-15 (7 séances) - Projet noté
+
+- Introduction du sujet du Projet
+  - "Création d'une application de gestion d'applications et de tickting"
+  - Seul ou en groupe de 2
+  - Rendu sur GitHub
+  - Description de cas d'usages :
+    - Le développeur et l'admin peuvent créer une application. Seul l'admin peut supprimer une application
+      - L'application est liée à plusieurs utilisateurs, possède un nom, une description et un état (en développement, en test, déployée, en maintenance)
+    - Les utilisateurs peuvent créer des tickets pour une application, seulement l'admin peut supprimer un ticket
+      - Un ticket possède un titre, une description et un état (non résolu, résolu)
+    - L'utilisateur et le développeur ne voient que les applications auxquelles ils sont affectés et leurs tickets. L'admin voit tout
+  - Features attendues :
+    - Authentification (Breeze)
+    - 3 rôles, admin, développeur, utilisateur (laravel-permissions)
+    - Recherche full-text pour les projets/tickets (Scout)
+    - Reporting journalier des tickets au format CSV (task scheduling + job + file storage)
 
 ## Objectifs pédagogiques
 
