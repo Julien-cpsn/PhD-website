@@ -150,9 +150,12 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Julien CAPOSIENA, Inc. Built with Docusaurus.`,
       },
+      tableOfContents: {
+        maxHeadingLevel: 4,
+      },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        darkTheme: prismThemes.vsDark,
         additionalLanguages: ['bash', 'c', 'css', 'csv', 'json', 'php', 'sql'],
       },
     }),
