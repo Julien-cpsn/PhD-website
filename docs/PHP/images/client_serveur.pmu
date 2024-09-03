@@ -1,0 +1,30 @@
+@startuml
+top to bottom direction
+
+cloud Internet
+
+() VPN
+
+actor "Client 1" as c1
+actor "Client 2" as c2
+actor "Client 3" as c3
+
+agent "Navigateur 1" as n1
+agent "Navigateur 2" as n2
+agent "Navigateur 3" as n3
+
+node "Serveur physique" as sp {
+    agent "Serveur PHP" as sphp
+}
+
+c1 --> n1
+c2 --> n2
+n1 <.-> Internet : HTTP
+n2 <.-> Internet : HTTP
+
+c3 --> n3
+n3 <.> VPN
+VPN <.-> Internet : HTTP
+
+Internet <.-> sp : HTTP
+@enduml

@@ -51,3 +51,14 @@
 article p {
   text-align: justify;
 }
+
+/*
+article img {
+  display: block;
+  margin-left: auto!important;
+  margin-right: auto!important;
+}*/
+
+details .theme-code-block {
+  margin: -16px;
+}
