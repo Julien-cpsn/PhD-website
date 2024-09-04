@@ -1,0 +1,13 @@
+[
+  {
+    "course": "PHP",
+    "filename": "cours-php-iut-dacs.pdf",
+    "endpoint": "/PHP",
+    "cover":  "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "title": "Développement WEB PHP",
+    "subtitle": "BUT Informatique parcours DACS",
+    "school": "IUT Lyon 1 – Site de la Doua",
+    "author": "Julien CAPOSIENA",
+    "subject": "Développement WEB PHP – BUT2 DACS"
+  }
+]

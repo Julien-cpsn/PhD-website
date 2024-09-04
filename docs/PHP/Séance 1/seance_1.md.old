@@ -1,0 +1,465 @@
+---
+title: Séance 1 - Introduction
+---
+
+## Présentation de la matière et des objectifs
+
+La matière s'oriente et s'organise autour du développement, de la conception et du déploiement d'applications WEB sécurisées. Elle s'imprègne entièrement du parcours DACS (Déploiement d'Applications Communicantes et Sécurisées).
+À travers ce cours, nous apprendrons PHP, célèbre langage du WEB, ainsi qu'un de ses frameworks "Laravel". Vous serrez également sensibilisés à la sécurité WEB ainsi qu'au déploiement autonomme d'application.
+
+Plusieurs types de titres indiquant le type de contenu :
+- 📜 Cours théorique
+- ⚙️ Cours pratique
+- 📚 TD/TP
+- 📝 Contrôle/QCM
+
+:::info
+
+Des commentaires avec les instructions seront présents tout au long des TD/TP pour vous guider sur les réponses à fournir.
+
+Par exemple :
+
+```php
+<?php
+
+$ma_var = "toto";
+
+// Ici, il faut afficher $ma_var
+...
+```
+:::
+
+:::info
+Quand le commentaire suivant est présent dans un fichier, **vous devez fournir un lien vers l'endroit où vous avez trouvé la réponse**.
+
+```php
+/**
+ * Lien : https://mon_lien.com
+ **/
+```
+
+Généralement, vous pouvez trouver la réponse sur 3 sites différents :
+- Ce site, en cliquant sur le titre de la partie, vous pourrez récupérer son lien. Par exemple : https://phd.julien-cpsn.com/courses/PHP/seance_1#remplacer-une-partie-dun-string-avec-replace
+- Sur la documentation officielle de PHP. Par exemple : https://www.php.net/manual/en/function.str-replace.php
+- Un blog, un forum, ou n'importe quel autre site en ligne (donc pas ChatGPT :)
+
+:::danger
+**Tout commentaire non rempli sera considéré non rendu**.
+- Si le travail à rendre est **non-noté**, je viendrai vous poser la question.
+- Si le travail à rendre est **noté**, la réponse sera comptée comme fausse.
+:::
+
+:::tip
+**Vous recevrez la liste des éléments à réviser un peu de temps avant l'éxamen.** Si j'oublie, n'hésitez pas à me le rappeler.
+:::
+
+## 📜 Introduction à PHP
+
+PHP, acronyme de "PHP: Hypertext Preprocessor", est un langage de script principalement conçu pour le développement web. PHP a vu le jour en 1995 avec sa première version créée par Rasmus Lerdorf, et depuis, il a considérablement évolué pour devenir l'un des langages de script les plus utilisés pour le développement web. Écrit en C, PHP tire parti de la performance et de la flexibilité offertes par ce langage de bas niveau, tout en fournissant une syntaxe plus simple et accessible aux développeurs web. La version actuelle, 8.3.9, intègre de nombreuses améliorations et nouvelles fonctionnalités par rapport à ses prédécesseurs, telles que des optimisations de performance, des améliorations de sécurité, et des fonctionnalités de programmation modernes. Grâce à ces mises à jour régulières, PHP continue de s'adapter aux besoins évolutifs du développement web moderne et reste un choix pertinent pour le développement côté serveur.
+
+<details>
+    <summary>**Scripting**</summary>
+
+    Contrairement aux langages de programmation traditionnels qui nécessitent la création de programmes complets, un langage de script comme PHP est utilisé pour écrire de petits scripts ou fichiers qui exécutent des actions spécifiques sur un serveur web.
+</details>
+
+<details>
+    <summary>**Interprété**</summary>
+
+    PHP est **interprété**, c'est-à-dire que le code est **exécuté ligne par ligne par un interpréteur**, contrairement aux langages compilés (comme C, C++ ou Java) où le code source est transformé en code machine/binaire avant d'être exécuté.
+</details>
+
+<details>
+    <summary>**Multi-plateforme**</summary>
+
+    PHP est **multi-plateforme**, ce qui signifie qu'**il peut fonctionner sur différents systèmes d'exploitation**, tout comme Java.
+</details>
+
+<details>
+    <summary>**Programmation Orientée Object**</summary>
+
+    Il prend également en charge la **Programmation Orientée Objet (POO)**, permettant la création de classes, d'objets, et l'utilisation de concepts comme l'héritage et le polymorphisme. 
+</details>
+
+<details>
+    <summary>**Faiblement typé**</summary>
+
+    PHP est faiblement typé (ou typé de manière souple), ce qui signifie que les types de données des variables ne sont pas strictement définis et peuvent être changés dynamiquement (ex: un int peut devenir un string), facilitant ainsi l'écriture du code mais pouvant parfois conduire à des erreurs subtiles.
+</details>
+
+<details>
+    <summary>**Execution côté serveur**</summary>
+
+    À noter que PHP s'exécute uniquement côté serveur : **le code est interprété sur le serveur**, puis le **résultat est renvoyé au client** (navigateur web), ce qui en fait un langage idéal pour la création de pages web dynamiques.
+
+![Diagramme Client-Serveur](../images/client_serveur.svg)
+</details>
+
+### Coder en PHP
+
+:::tip
+Toujours garder la [documentation de PHP](https://www.php.net/manual/fr/) près de soi
+:::
+
+- Extension ".php"
+- Les variables ont toutes un `$`, ex: `$ma_var`
+- Point virgule à la fin des lignes
+- Convention de nommage snake_case, ex `ma_super_fonction` 
+- Tous les fichiers commencent avec `<?php`, et peuvent finir par `?>`
+- Il est possible de mettre des balises `<?php ... ?>` dans du HTML (toujours dans un fichier `.php`)
+
+```php
+<div>
+    <p>Mon paragraphe</p>
+    <div><?php echo $ma_var; ?></div>
+</div>
+```
+
+### Différences de PHP
+
+#### Echo
+
+Print avec `echo` (ne pas oublier d'ajouter un `\n`, car il ne retourne pas à la ligne)
+
+```php
+$ma_var = "toto";
+echo $ma_var;
+echo "Salut c'est $ma_var\n";
+```
+
+![echo.png](../images/echo.png)
+
+#### Debug
+
+Debugguer une variable avec `var_dump()`. Cela permet d'afficher le contenu complet de la variable au moment où est appelée la fonction pour régler d'éventuels problèmes.
+
+```php
+$ma_var = [1, 2, 5];
+var_dump($ma_var);
+```
+
+![var_dump.png](../images/var_dump.png)
+
+#### For each
+
+Le `for each` ("pour chaque")
+
+```php
+$mes_valeurs = [1, 2, 3, 4];
+
+foreach ($mes_valeurs as $var) {
+    echo "$var\n";
+}
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+1
+2
+3
+4
+```
+</details>
+
+Il est aussi possible d'utiliser une clé
+
+```php
+$mes_valeurs = [10, 11, 12, 13];
+
+foreach ($mes_valeurs as $index => $var) {
+    echo "$index: $var\n";
+}
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+0: 10
+1: 11
+2: 12
+3: 13
+```
+</details>
+
+#### Match
+
+Plus récent, le `match`
+
+```php
+$ma_var = 2;
+
+$mon_autre_var = match ($ma_var) {
+    1, 2 => "toto",
+    $ma_var > 10 => "tata",
+    default => "cas par défaut"
+};
+
+echo $mon_autre_var;
+```
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+toto
+```
+</details>
+
+#### Tableaux associatifs
+
+Pour créer des tableaux avec des index personnalisés (comme un dictionnaire)
+
+```php
+$ma_var = [
+    0 => "toto",
+    "mon index 1" => "tata",
+    "mon autre index" => "tonton" 
+];
+
+echo $ma_var["mon autre index"];
+```
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+tonton
+```
+</details>
+
+#### Opérateur "." pour ajouter des strings
+
+Pour ajouter/concatener des strings en PHP, on utilise l'opérateur `.`
+
+```php
+echo "mon string 1" . "mon string 2";
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+mon string 1mon string 2
+```
+</details>
+
+- - -
+
+## 📚 TD 1 : Premiers scripts
+
+
+### Cloner le projet
+Cloner le projet https://github.com/PHP-BUT2-DACS/TP-TD
+
+```shell
+git clone https://github.com/PHP-BUT2-DACS/TP-TD.git
+```
+
+:::warning
+**Ce projet vous servira tout le long du module**. Gardez le précieusement !
+:::
+
+### Faire les exercices
+
+1. Dans un terminal, exécutez la commande `php -v` (ou `php --version`) pour être informé de la version de votre interpréteur PHP.
+
+2. Ensuite, naviguez jusqu'au dossier du projet `/Séance 1/TD1`. Puis démarrez le serveur PHP avec la commande suivante :
+
+```shell
+php -S localhost:8080
+```
+
+<details>
+    <summary>Comprendre la commande</summary>
+
+- `php` fait référence à l'interpréteur PHP pré-installé sur votre machine.
+- L'option `-S` (pour **S**erver) permet de **créer un serveur PHP**. Cette option nécessite deux paramètres :
+  - `<addr>`, c'est-à-dire **l'adresse à laquelle on veut utiliser notre serveur** (`localhost`, correspond à l'hôte local)
+  - `<port>` permet de préciser **le port à utiliser** pour l'adresse précédemment fournie. En informatique, il est couramment admis que les ports 808X, 800X, 300X, 500X sont réservés pour le développement. 
+</details>
+
+3. Ouvrir le navigateur à l'URL [http://localhost:8080/exo1.php](http://localhost:8080/exo1.php)
+
+4. Une fois la commande lancée et l'URL ouverte, votre terminal devrait afficher quelque-chose de similaire :
+
+:::info 🖥️ Sortie
+![terminal.png](../images/terminal.png)
+:::
+
+5. Répondez aux exercices du TD1. Vous pouvez demander de l'aide si nécessaire.
+
+:::tip
+La commande `php -h` (ou `php --help`) pourra vous aider si vous êtes perdus avec d'autres commandes de PHP.
+:::
+
+- - -
+
+## ⚙️ Fonctions utilitaires & autres outils
+
+### Utilitaires pour les string (chaînes de caractères)
+
+[Documentation](https://www.php.net/manual/fr/ref.strings.php)
+
+#### String en majuscule ou miniscule
+
+```php
+$ma_var = "toto";
+echo strtoupper($ma_var) . "\n";
+
+$ma_var = "TATA";
+echo strtolower($ma_var);
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+TOTO
+tata
+```
+</details>
+
+#### Séparer avec explode et regrouper avec implode
+
+```php
+$ma_var = "toto;tata;tonton";
+
+// Séparer un string vers un tableau
+$mon_tableau = explode(";", $ma_var);
+var_dump($mon_tableau);
+
+// Regrouper des éléments d'un tableau vers un string
+$mon_autre_var = implode(";", $mon_tableau);
+echo $mon_autre_var;
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+["toto", "tata", "tonton"]
+toto;tata;tonton
+```
+</details>
+
+#### Supprimer les espaces en trop avec trim
+
+```php
+$ma_var = "   toto    ";
+$mon_autre_var = trim($ma_var);
+echo $ma_var;
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+toto
+```
+</details>
+
+Il existe aussi ltrim (left trim) pour supprimer les espaces seulement au début, et rtrim (right trim) pour supprimer les espaces seulement à la fin.
+
+#### Remplacer une partie d'un string avec replace
+
+```php
+$ma_var = "toto";
+$mon_autre_var = str_replace("o", "a", $ma_var);
+echo $ma_var;
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+tata
+```
+</details>
+
+### Utilitaires pour les int et float (nombres)
+
+#### Transformer une variable en int ou float
+
+```php
+$ma_var = "10";
+$mon_int = intval($ma_var);
+var_dump($ma_var);
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+int(10)
+```
+</details>
+
+Même principe avec `floatval()`
+
+### Autres utilitaires
+
+#### Checker le type d'une variable
+
+- `is_array()` — Détermine si une variable est un tableau
+- `is_bool()` — Détermine si une variable est un booléen
+- `is_callable()` — Détermine si une valeur peut être appelé comme une fonction dans la portée courante.
+- `is_countable()` — Vérifie si le contenu de la variable est une valeur dénombrable
+- `is_float()` — Détermine si une variable est de type nombre décimal
+- `is_int()` — Détermine si une variable est de type nombre entier
+- `is_numeric()` — Détermine si une variable est un nombre ou une chaîne numérique
+
+```php
+var_dump(is_int(23));
+var_dump(is_int("23"));
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+bool(true)
+bool(false)
+```
+</details>
+
+#### Checker si une variable existe (et si elle est vide)
+
+`isset()` détermine si une variable est considérée définie, ceci signifie qu'elle est déclarée et est différente de `null`.
+
+```php
+$est_ce_que_ma_var_existe = isset($ma_var)
+var_dump($est_ce_que_ma_var_existe)
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+bool(false)
+```
+</details>
+
+`empty()` détermine si une variable est considérée définie et si sa valeur équivaut à `false`.
+
+```php
+$mon_tableau = ["toto", "tata", false]
+
+$est_ce_que_toto_existe = empty($mon_tableau[0])
+$est_ce_que_tonton_existe = empty($mon_tableau[2])
+var_dump($est_ce_que_toto_existe)
+var_dump($est_ce_que_tonton_existe)
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+bool(false)
+bool(true)
+```
+</details>
+
+- - -
+## 📚 TD 2 : Utilitaires & outils
+
+Si ce n'est pas déjà fait, cloner le projet https://github.com/PHP-BUT2-DACS/TP-TD
+
+```shell
+git clone https://github.com/PHP-BUT2-DACS/TP-TD.git
+```
+
+1. Lancer le serveur PHP dans le dossier `/Séance 1/TD2`
+
+```shell
+php -S localhost:8080
+```
+
+2. Répondez aux exercices du TD2. Vous pouvez demander de l'aide si nécessaire.
