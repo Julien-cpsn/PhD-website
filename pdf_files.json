@@ -1,13 +1,24 @@
 [
   {
     "course": "PHP",
-    "filename": "cours-php-iut-dacs.pdf",
+    "filename": "php-iut-dacs-full.pdf",
     "endpoint": "/PHP",
     "cover":  "https://cdn-icons-png.flaticon.com/512/919/919830.png",
-    "title": "Développement WEB PHP",
+    "title": "Développement WEB PHP - Cours complet",
     "subtitle": "BUT Informatique parcours DACS",
     "school": "IUT Lyon 1 – Site de la Doua",
     "author": "Julien CAPOSIENA",
     "subject": "Développement WEB PHP – BUT2 DACS"
+  },
+  {
+    "course": "PHP - Séance 1",
+    "filename": "php-iut-dacs-course-1.pdf",
+    "endpoint": "/PHP/course-1",
+    "cover":  "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "title": "Développement WEB PHP - Séance 1",
+    "subtitle": "BUT Informatique parcours DACS",
+    "school": "IUT Lyon 1 – Site de la Doua",
+    "author": "Julien CAPOSIENA",
+    "subject": "Séance 1 – Développement WEB PHP – BUT2 DACS"
   }
 ]
