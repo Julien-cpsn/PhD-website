@@ -20,5 +20,16 @@
     "school": "IUT Lyon 1 – Site de la Doua",
     "author": "Julien CAPOSIENA",
     "subject": "Séance 1 – Développement WEB PHP – BUT2 DACS"
+  },
+  {
+    "course": "PHP - Séance 2",
+    "filename": "php-iut-dacs-course-2.pdf",
+    "endpoint": "/PHP/course-2",
+    "cover":  "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "title": "Développement WEB PHP - Séance 2",
+    "subtitle": "BUT Informatique parcours DACS",
+    "school": "IUT Lyon 1 – Site de la Doua",
+    "author": "Julien CAPOSIENA",
+    "subject": "Séance 2 – Développement WEB PHP – BUT2 DACS"
   }
 ]

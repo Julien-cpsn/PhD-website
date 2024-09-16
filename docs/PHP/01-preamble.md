@@ -17,11 +17,12 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 - Introduction à PHP
 - TD 1 : Premiers scripts
 - Fonctions utilitaires & autres outils
-- TD 2 : XXXXXX
+- TD 2 : Utilitaires & outils
 
 ### Séance 2 - Front-end
 
 - Introduction aux concepts de stack WEB (front-end, back-end, base-de-données), rendu côté serveur (SSR) et au protocole HTTP(S)
+- Variables prédéfinies
 - TP : Gérer un formulaire
 - TP : Page de profil utilisateur
 

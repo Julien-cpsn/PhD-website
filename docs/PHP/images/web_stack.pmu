@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam defaultTextAlignment center
+
+actor "Client" as c1
+
+agent "**Front-End**\nHTML / CSS / JS" as f1
+
+agent "**Back-End**\nPHP / Java / Go / Rust" as b1
+
+agent "**Base de données**\nPostGreSQL / MySQL / MongoDB" as db1
+
+c1 -> f1: Actions utilisateurs
+f1 -> b1: Requêtes HTTP
+b1 -> db1: Requêtes SQL
+f1 .u.> c1: Retours visuels
+b1 .u.> f1: Réponses HTTP
+db1 .u.> b1: Données
+@enduml
