@@ -3,7 +3,7 @@ title: "📜 | Architecture d'une application web"
 ---
 
 :::info
-Cette partie n'est pas à apprendre en détails. Cependant, la compréhension des différents termes évoqués est nécessaires.
+Cette partie n'est pas à apprendre en détails. Cependant, **la compréhension des différents termes évoqués est nécessaire**.
 :::
 
 Dans ce cours, nous allons explorer l'architecture typique d'une application web en distinguant les rôles du **client**, du **front-end**, du **back-end**, et de la **base de données**. Chaque composant joue un rôle crucial dans le traitement des requêtes et des réponses qui permettent aux utilisateurs d'interagir avec une application web.
