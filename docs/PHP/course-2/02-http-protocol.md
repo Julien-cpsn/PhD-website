@@ -171,3 +171,22 @@ Content-Length: 245
 - **Corps de la requête** (Body) : Un JSON qui contient les informations de l'utilisateur à créer.
 
 Cette requête va ensuite être traitée par le back-end qui disposera alors de toutes ces informations.
+
+## Sécurité avec HTTPS
+
+**HTTPS** (Hypertext Transfer Protocol Secure) est la combinaison du HTTP avec une couche de chiffrement **TLS**. HTTPS permet au visiteur de vérifier l'identité du site web auquel il accède, grâce à un certificat d'authentification émis par une autorité tierce, réputée fiable.
+
+La TLS (ou SSL) fonctionne suivant un mode client-serveur. Il permet de satisfaire les objectifs de sécurité suivants :
+
+- L'authentification du serveur
+- La confidentialité des données échangées (ou session chiffrée)
+- L'intégrité des données échangées
+- De manière optionnelle, l'authentification du client (mais dans la réalité celle-ci est souvent assurée par la couche applicative)
+
+## Pour aller plus loin
+
+Le protocole HTTP est un membre de la famille **TCP/IP**. TCP/IP est une famille de protocoles de communication utilisés pour connecter des systèmes informatiques dans un réseau. Il est nommé d'après deux des protocoles de la famille: Transmission Control Protocol (TCP) et Internet Protocol (IP ; oui, comme les IPv4 et IPv6).
+
+Bien que TCP/IP et HTTP ne soient pas parfaitement identiques, le diagramme de séquence suivant permet de mieux comprendre ce qu'il se passe dernière une seule requête HTTP.
+
+![Diagramme séquence de TCP/IP](../images/tcp_sequence_diagram.png)

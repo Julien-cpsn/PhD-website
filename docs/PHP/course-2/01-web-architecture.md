@@ -18,6 +18,20 @@ Voici un diagramme pour faciliter la compréhension tout au long de l'explicatio
 ![Diagramme stack WEB avec détails](../images/web_stack_detailed.svg)
 </details>
 
+:::tip En analogie 🥖
+Imaginons une boulangerie pour illustrer le fonctionnement d'une application web.
+
+- Le **client** est simplement la personne qui entre dans la boulangerie.
+- La **vendeuse** représente le **front-end**.
+- Le **boulanger** en cuisine, correspond au **back-end**.
+- Le **stock de ressources**, représente la **base de données**.
+
+La vendeuse prend la commande du client (comme le front-end qui capture les actions utilisateurs) et, si nécessaire, envoie une demande au boulanger.
+Le boulanger, lui, prépare le pain ou vérifie dans le stock de ressources, pour voir s'il a les ingrédients ou les produits nécessaires.
+Une fois la demande traitée, le boulanger transmet le pain à la vendeuse, qui le remet au client, tout comme le front-end affiche les résultats après que le back-end a traité les données.
+À aucun moment le client n'a intéragit avec le boulanger ou le sock de ressources.
+:::
+
 ## Le rôle du client
 
 Le **client** représente l'utilisateur qui interagit avec une application web à l'aide d'un navigateur. Il envoie des actions, généralement sous forme de clics, soumissions de formulaires, ou autres interactions avec l'interface visuelle. Le client ne fait qu'exécuter des actions, sans avoir directement accès au traitement des données ou à la logique de l'application. Tout ce qu'il voit se limite à l'interface utilisateur visible dans le navigateur.
@@ -34,6 +48,13 @@ Le front-end prend en charge les **actions de l'utilisateur**, comme un clic sur
 
 :::info
 Le front-end est **obligatoire**. Sans HTML, il n'existe pas de site (et donc pas de WEB).
+:::
+
+:::warning
+Comme cité dans la séance 1, le PHP s'exécute côté serveur. Même si le PHP est utilisé pour faire du front-end, le rendu de la page se fera côté serveur, et ensuite le client réceptionne le HTML/CSS/JS créé au préalable. Cette notion est appelée **Server Side Rendering** (ou **SSR**).
+
+:::danger
+**Le client ne peut pas exécuter de PHP**, il ne reçoit toujours que du HTML/CSS/JS.
 :::
 
 ## Back-End : Côté serveur
@@ -76,16 +97,6 @@ Pour récapituler, le cycle de traitement d'une application web se déroule comm
 
 Ce modèle d'interaction est typique de la majorité des applications web modernes et repose sur une division claire des rôles entre les différentes couches pour une meilleure organisation et maintenabilité du code.
 
-:::tip En analogie 🥖
-Imaginons une boulangerie pour illustrer le fonctionnement d'une application web.
+## Stack & Full-stack
 
-- Le **client** est simplement la personne qui entre dans la boulangerie.
-- La **vendeuse** représente le **front-end**.
-- Le **boulanger** en cuisine, correspond au **back-end**.
-- Le **stock de ressources**, représente la **base de données**.
-
-La vendeuse prend la commande du client (comme le front-end qui capture les actions utilisateurs) et, si nécessaire, envoie une demande au **boulanger**.
-Le boulanger, lui, prépare le pain ou vérifie dans le **stock de ressources**, pour voir s'il a les ingrédients ou les produits nécessaires.
-Une fois la demande traitée, le boulanger transmet le pain à la vendeuse, qui le remet au client, tout comme le front-end affiche les résultats après que le back-end a traité les données.
-À aucun moment le client n'a intéragit avec le boulanger ou le sock de ressources. 
-:::
+Le terme **stack WEB** correspond à l'ensemble du front-end, back-end et de la base de données (ou même l'administration de ces systèmes). Un développeur **full-stack** est développeur qui maître et utilise l'ensemble de ces aspects.
