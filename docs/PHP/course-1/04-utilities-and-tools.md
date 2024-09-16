@@ -1,6 +1,4 @@
----
-title: "⚙️ | Fonctions utilitaires & autres outils"
----
+# ⚙️ | Fonctions utilitaires & autres outils
 
 ## Utilitaires pour les string (chaînes de caractères)
 

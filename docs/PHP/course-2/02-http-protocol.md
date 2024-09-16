@@ -1,6 +1,4 @@
----
-title: "📜 | Anatomie du protocole HTTP"
----
+# 📜 | Anatomie du protocole HTTP
 
 :::info
 Cette partie n'est pas à apprendre par cœur, mais elle constitue un élément principal de la compréhension du monde du WEB. **La compréhension des différents termes évoqués est nécessaire**.

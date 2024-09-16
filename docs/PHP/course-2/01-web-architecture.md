@@ -1,6 +1,4 @@
----
-title: "📜 | Architecture d'une application web"
----
+# 📜 | Architecture d'une application web
 
 :::info
 Cette partie n'est pas à apprendre en détails. Cependant, **la compréhension des différents termes évoqués est nécessaire**.

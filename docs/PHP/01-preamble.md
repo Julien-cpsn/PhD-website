@@ -1,8 +1,4 @@
----
-title: Préambule
----
-
-# Programme
+# Préambule
 
 Ce cours vise à enseigner le langage de programme PHP et le framework Laravel aux étudiants en 2ème année de BUT Informatique en parcours DACS de l'IUT Lyon1.
 

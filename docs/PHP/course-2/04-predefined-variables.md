@@ -1,7 +1,4 @@
----
-title: "⚙️ | Variables prédéfinies"
----
-
+# ⚙️ | Variables prédéfinies
 
 https://www.php.net/manual/fr/reserved.variables.php
 

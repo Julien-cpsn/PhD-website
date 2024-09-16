@@ -158,7 +158,25 @@ const config = {
         darkTheme: prismThemes.vsDark,
         additionalLanguages: ['bash', 'c', 'css', 'csv', 'json', 'php', 'sql', 'http'],
       },
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgba(215, 215, 215, 0.95)',
+          dark: 'rgba(50, 50, 50, 0.95)'
+        },
+      },
     }),
+
+  plugins: [
+    'docusaurus-plugin-image-zoom',
+    '@saucelabs/theme-github-codeblock',
+    [
+      'docusaurus-graph',
+      {
+        path: 'docs',
+      },
+    ],
+  ]
 };
 
 export default config;
