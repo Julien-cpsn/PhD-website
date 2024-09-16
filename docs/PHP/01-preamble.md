@@ -21,7 +21,9 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 
 ### Séance 2 - Front-end
 
-- Introduction aux concepts de stack WEB (front-end, back-end, base-de-données), rendu côté serveur (SSR) et au protocole HTTP(S)
+- Introduction aux concepts de stack WEB (front-end, back-end, base-de-données)
+- Protocole HTTP(S)
+- JSON
 - Variables prédéfinies
 - TP : Gérer un formulaire
 - TP : Page de profil utilisateur

@@ -62,3 +62,7 @@ article img {
 details .theme-code-block {
   margin: -16px;
 }
+
+details .theme-admonition .theme-code-block {
+  margin: 0;
+}

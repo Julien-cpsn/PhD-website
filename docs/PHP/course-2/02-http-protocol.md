@@ -36,7 +36,7 @@ La ligne de requête est la première ligne de la requête HTTP. Elle contient t
 GET /articles/42 HTTP/1.1
 ```
 
-### En-têtes de requête (Request Headers)
+### En-têtes de requête (Headers)
 
 Les en-têtes de requête fournissent des informations supplémentaires sur la requête, telles que le type de contenu envoyé, les autorisations nécessaires, ou encore des informations sur le client. Chaque en-tête est une paire clé-valeur.
 
@@ -55,7 +55,7 @@ User-Agent: Mozilla/5.0
 Accept: application/json
 ```
 
-### Corps de la requête (Request Body)
+### Corps de la requête (Body)
 
 Le corps de la requête est une partie optionnelle qui contient les données envoyées au serveur, par exemple lors d'une requête `POST` ou `PUT`. Ces données peuvent être de divers formats (JSON, XML, formulaire encodé, etc). Pour une requête `GET`, le corps de la requête est généralement absent car les données sont passées dans l'URI (via des paramètres de requête).
 
@@ -135,3 +135,39 @@ Certains en-têtes jouent un rôle important dans le traitement des requêtes HT
 - **Authorization** : Utilisé pour transmettre des informations d'authentification, comme un jeton d'accès dans les services sécurisés.
 
 - **Cookie** : Utilisé pour stocker et envoyer des informations liées à une session utilisateur ou à des préférences sur le site web.
+
+## Exemple complet
+
+Voici un exemple plus complexe pour savoir à quoi peut ressembler une requête HTTP dans un cas réel :
+
+```http
+POST /api/v1/users/create?notify=true&admin=false HTTP/1.1
+Host: api.example.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e30.m5uXnxMlfz_mxCzMzRZZHY
+Content-Type: application/json
+Accept: application/json
+User-Agent: Firefox/1.0.0
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Length: 245
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "SuperSecretPassword",
+  "roles": ["user", "editor"],
+}
+```
+- **Méthode HTTP** : `POST` est utilisé ici pour créer une nouvelle ressource (un utilisateur).
+- **Chemin de l'API** : `/api/v1/users/create` indique l'URL du endpoint.
+  - **Paramètres de requête** : `?notify=true&admin=false` précise que l'utilisateur doit être notifié et qu'il ne sera pas créé en tant qu'administrateur.
+- **En-têtes HTTP** (Headers) :
+  - `Authorization: Bearer` est utilisé pour envoyer un token JWT (JSON Web Token) pour l'authentification.
+  - `Content-Type: application/json` indique que le corps de la requête est au format JSON.
+  - `Accept: application/json` signifie que la réponse attendue doit également être au format JSON.
+  - `User-Agent` spécifie l'application qui envoie la requête.
+  - `Cache-Control` et `Pragma` désactivent la mise en cache.
+- **Corps de la requête** (Body) : Un JSON qui contient les informations de l'utilisateur à créer.
+
+Cette requête va ensuite être traitée par le back-end qui disposera alors de toutes ces informations.
