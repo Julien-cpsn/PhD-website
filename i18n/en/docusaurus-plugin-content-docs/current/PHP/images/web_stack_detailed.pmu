@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam defaultTextAlignment center
+
+actor "Client" as c1
+
+agent "//https:~/~/mon-site.com//\n__**Front-End**__\n\nAffiche les données\nIl en existe autant d'instances que de clients\n\nHTML / CSS / JS" as f1
+
+agent "//https:~/~/mon-site.com/api//\n__**Back-End**__\n\nTraite les données\nIl n'en existe qu'une seule instance\n\nPHP / Java / Go / Rust" as b1
+
+agent "//mon-serveur.prive.entreprise//\n__**Base de données**__\n\nStocke les données\nPostGreSQL / MySQL / MongoDB" as db1
+
+c1 -> f1: Actions utilisateurs
+f1 -> b1: Requêtes HTTP
+b1 -> db1: Requêtes SQL
+f1 .u.> c1: Retours visuels
+b1 .u.> f1: Réponses HTTP
+db1 .u.> b1: Données
+@enduml
