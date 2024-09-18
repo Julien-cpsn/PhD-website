@@ -4,7 +4,25 @@
 
 [Lien vers la documentation de PHP](https://www.php.net/manual/fr/ref.strings.php)
 
+### Taille d'une chaîne de caractères
+
+Calcule la taille d'une chaîne de caractères.
+
+```php
+$mon_string = "test";
+echo strlen($mon_string);
+```
+
+<details>
+    <summary>🖥️ Sortie</summary>
+```
+4
+```
+</details>
+
 ### String en majuscule ou miniscule
+
+Renvoie un string en majuscules ou minuscules.
 
 ```php
 $ma_var = "toto";
@@ -23,6 +41,8 @@ tata
 </details>
 
 ### Séparer avec explode et regrouper avec implode
+
+Scinde our regroupe une chaîne de caractères en segments
 
 ```php
 $ma_var = "toto;tata;tonton";
