@@ -1,0 +1,9 @@
+[data-theme='dark'] {
+    .rbc-today {
+        background-color: #82adcd;
+    }
+
+    .rbc-off-range-bg {
+        background-color: slategray;
+    }
+}

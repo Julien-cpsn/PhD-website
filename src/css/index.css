@@ -1,0 +1,46 @@
+.main-page {
+  margin: 25px;
+}
+
+.main-page > p {
+  margin: 40px 20px;
+}
+
+@media screen and (max-width: 996px) {
+  .main-page > p {
+    margin: 10px;
+    text-align: justify;
+  }
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: start;
+}
+
+@media screen and (max-width: 996px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.calendar {
+  width: 800px;
+  height: 600px;
+  border-width: 0
+}
+
+[data-theme='dark'] .calendar {
+  filter:invert(.895)hue-rotate(120deg);
+}
+
+@media screen and (max-width: 996px) {
+  .calendar {
+    width: 100%;
+    height: 400px;
+  }
+}

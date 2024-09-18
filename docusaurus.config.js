@@ -79,7 +79,7 @@ const config = {
           }
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       }),
     ],
@@ -137,6 +137,10 @@ const config = {
           {
             title: 'Cours',
             items: [
+              {
+                label: 'PHP',
+                to: '/courses/PHP'
+              }
             ],
           },
           {
@@ -146,6 +150,14 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/Julien-cpsn/',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/julien-caposiena-54555a195/'
+              },
+              {
+                label: 'ORCID',
+                href: 'https://orcid.org/0009-0002-0684-7221'
+              }
             ],
           },
           {
@@ -154,6 +166,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Curriculum Vitae',
+                to: '/cv',
               },
             ],
           },
@@ -178,6 +194,7 @@ const config = {
     }),
 
   plugins: [
+    'docusaurus-plugin-sass',
     'docusaurus-plugin-image-zoom',
     '@saucelabs/theme-github-codeblock',
     [

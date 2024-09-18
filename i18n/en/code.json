@@ -325,7 +325,16 @@
     "message": "Home",
     "description": "The homepage name"
   },
-  "Travail en cours": {
-    "message": "Work In Progress"
+  "Mes cours": {
+    "message": "My courses"
+  },
+  "Mes publications": {
+    "message": "My publications"
+  },
+  "Mes projets": {
+    "message": "My projects"
+  },
+  "Emploi du temps": {
+    "message": "Timetable"
   }
 }
