@@ -7,9 +7,13 @@
     "message": "My logo",
     "description": "The alt text of navbar logo"
   },
+  "item.label.Accueil": {
+    "message": "Home",
+    "description": "Navbar item with label Home"
+  },
   "item.label.Cours": {
     "message": "Courses",
-    "description": "Navbar item with label Cours"
+    "description": "Navbar item with label Courses"
   },
   "item.label.Blog": {
     "message": "Blog",

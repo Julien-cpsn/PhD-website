@@ -98,6 +98,11 @@ const config = {
         },
         items: [
           {
+            href: '/',
+            label: 'Accueil',
+            position: 'left'
+          },
+          {
             type: 'docSidebar',
             position: 'left',
             sidebarId: 'coursesSidebar',
@@ -106,6 +111,11 @@ const config = {
           {
             to: '/blog',
             label: 'Blog',
+            position: 'left'
+          },
+          {
+            to: '/cv',
+            label: 'Curriculum Vitae',
             position: 'left'
           },
           {
