@@ -28,7 +28,7 @@ const home_paragraph = {
         Lab</a> and at <a href="https://www.insa-lyon.fr/" target="_blank">INSA Lyon</a>. My work
         research focuses on the <strong>Design and development of a dedicated open source operating system
         to routers: towards a converged system and network architecture</strong>. At the same time, I teach
-        the <a href="https://iut.univ-lyon1.fr/" target="_blank">IUT Lyon 1</a>, where I share my passion for IT
+        at <a href="https://iut.univ-lyon1.fr/" target="_blank">IUT Lyon 1</a>, where I share my passion for IT
         and networks with students.<br/>
 
         On this site, you will find my courses, as well as articles retracing the progress of my thesis. Don't hesitate
