@@ -1,10 +1,33 @@
+---
+categories:
+- ⚙️ Practical Course
+---
+
 # ⚙️ | Utility Functions & Other Tools
 
-## String Utilities
+## Utilities for strings
 
 [Link to PHP documentation](https://www.php.net/manual/en/ref.strings.php)
 
-### Uppercase and Lowercase Strings
+### String length
+
+Calculates the length of a string.
+
+```php
+$my_string = "test";
+echo strlen($my_string);
+```
+
+<details>
+    <summary>🖥️ Output</summary>
+```
+4
+```
+</details>
+
+### Uppercase or lowercase string
+
+Returns a string in uppercase or lowercase.
 
 ```php
 $ma_var = "toto";
@@ -22,7 +45,9 @@ tata
 ```
 </details>
 
-### Split with explode and Join with implode
+### Split with explode and join with implode
+
+Splits or joins a string into segments.
 
 ```php
 $ma_var = "toto;tata;tonton";
@@ -44,7 +69,7 @@ toto;tata;tonton
 ```
 </details>
 
-### Remove Extra Spaces with trim
+### Remove extra spaces with trim
 
 ```php
 $my_var = "   toto    ";
@@ -61,7 +86,7 @@ toto
 
 There is also ltrim (left trim) to remove spaces only at the beginning, and rtrim (right trim) to remove spaces only at the end.
 
-### Replace a Part of a String with replace
+### Replace part of a string with replace
 
 ```php
 $my_var = "toto";
@@ -76,9 +101,9 @@ tata
 ```
 </details>
 
-## Integer and Float Utilities
+## Utilities for int and float (numbers)
 
-### Convert a Variable to int or float
+### Convert a variable to int or float
 
 ```php
 $my_var = "10";
@@ -95,9 +120,9 @@ int(10)
 
 Same principle with `floatval()`
 
-## Other Utilities
+## Other utilities
 
-### Check the Type of a Variable
+### Check the type of a variable
 
 - `is_array()` — Determines if a variable is an array
 - `is_bool()` — Determines if a variable is a boolean
@@ -120,13 +145,13 @@ bool(false)
 ```
 </details>
 
-### Check if a variable exists (and if it is empty)
+### Checking if a variable exists (and if it is empty)
 
 `isset()` determines if a variable is considered set, which means it is declared and is not `null`.
 
 ```php
-$is_my_var_set = isset($my_var)
-var_dump($is_my_var_set)
+$is_my_var_set = isset($my_var);
+var_dump($is_my_var_set);
 ```
 
 <details>

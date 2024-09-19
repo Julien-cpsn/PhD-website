@@ -1,3 +1,8 @@
+---
+categories:
+- 📜 Cours théorique
+---
+
 # 📜 | Anatomie du protocole HTTP
 
 :::info

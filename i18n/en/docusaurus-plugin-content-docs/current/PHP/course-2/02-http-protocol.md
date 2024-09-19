@@ -1,10 +1,15 @@
+---
+categories:
+- 📜 Theoretical course
+---
+
 # 📜 | Anatomy of the HTTP Protocol
 
 :::info
-This part is not meant to be memorized, but it is a key element in understanding the world of the WEB. **Understanding the different terms mentioned is necessary**.
+This part is not to be memorized, but it is a key element in understanding the world of the WEB. **Understanding the different terms mentioned is necessary**.
 :::
 
-In the context of web development, the **HTTP** (HyperText Transfer Protocol) protocol plays a central role by enabling communication between web browsers (clients) and servers. When a user accesses a web page or interacts with an online application, a series of HTTP requests and responses are exchanged between the client and the server. Understanding the anatomy of an HTTP request is essential for diagnosing issues, optimizing web applications, and developing efficient API services.
+In the context of web development, the **HTTP** (HyperText Transfer Protocol) protocol plays a central role in enabling communication between web browsers (clients) and servers. When a user accesses a web page or interacts with an online application, a series of HTTP requests and responses are exchanged between the client and the server. Understanding the anatomy of an HTTP request is essential for diagnosing issues, optimizing web applications, and developing efficient API services.
 
 ## Components of an HTTP Request
 
@@ -36,12 +41,12 @@ GET /articles/42 HTTP/1.1
 
 ### Request Headers
 
-Request headers provide additional information about the request, such as the type of content being sent, required permissions, or client information. Each header is a key-value pair.
+Request headers provide additional information about the request, such as the type of content being sent, necessary permissions, or information about the client. Each header is a key-value pair.
 
 Common headers include:
 
 - **Host**: the server's address (e.g., `www.example.com`).
-- **User-Agent**: information about the client, such as the browser type being used.
+- **User-Agent**: information about the client, such as the type of browser being used.
 - **Accept**: specifies the type of content the client can accept (e.g., `text/html`, `application/json`).
 - **Content-Type**: indicates the type of data sent in the request body (useful for `POST` or `PUT`, e.g., `application/json`).
 - **Authorization**: contains authentication information.
@@ -55,7 +60,7 @@ Accept: application/json
 
 ### Request Body
 
-The request body is an optional part that contains data sent to the server, for example in a `POST` or `PUT` request. This data can be in various formats (JSON, XML, form-encoded, etc). For a `GET` request, the request body is usually absent as data is passed in the URI (via query parameters).
+The request body is an optional part that contains data sent to the server, for example during a `POST` or `PUT` request. This data can be in various formats (JSON, XML, encoded form, etc). For a `GET` request, the request body is usually absent as the data is passed in the URI (via query parameters).
 
 **Example** (in a `POST` request):
 ```json
@@ -67,9 +72,9 @@ The request body is an optional part that contains data sent to the server, for 
 
 ## The HTTP Request Cycle
 
-When the client (browser or application) sends an HTTP request, here are the main steps that occur:
+When the client (the browser or an application) sends an HTTP request, here are the main steps that occur:
 
-1. **User interacts with the interface** (e.g., clicking on a link or a form submission button).
+1. **User interacts with the interface** (e.g., by clicking on a link or a form submission button).
 2. **Browser sends an HTTP request** to the specified server, containing the request line, headers, and, in some cases, a request body.
 3. **Server receives the request**, interprets it, and performs necessary actions (retrieve data from a database, perform calculations, etc.).
 4. **Server sends an HTTP response** to the client, containing the requested data or an error message if the request cannot be processed.
@@ -128,7 +133,7 @@ HTTP methods, also known as HTTP verbs, specify the type of action to be perform
 
 Some headers play a crucial role in processing HTTP requests:
 
-- **Cache-Control**: Manages the caching behavior of resources. For example, it can instruct the browser on whether to store a copy of the resource and for how long.
+- **Cache-Control**: Manages the caching behavior of resources. For example, it can instruct the browser whether to store a copy of the resource and for how long.
 
 - **Authorization**: Used to transmit authentication information, such as an access token in secure services.
 
@@ -136,7 +141,7 @@ Some headers play a crucial role in processing HTTP requests:
 
 ## Complete Example
 
-Here is a more complex example to understand what an HTTP request might look like in a real-world scenario:
+Here is a more complex example to see what an HTTP request might look like in a real-world scenario:
 
 ```http
 POST /api/v1/users/create?notify=true&admin=false HTTP/1.1
@@ -158,12 +163,12 @@ Content-Length: 245
 }
 ```
 - **HTTP Method**: `POST` is used here to create a new resource (a user).
-- **API Path**: `/api/v1/users/create` indicates the endpoint URL.
+- **API Endpoint**: `/api/v1/users/create` indicates the URL of the endpoint.
   - **Query Parameters**: `?notify=true&admin=false` specifies that the user should be notified and should not be created as an administrator.
 - **HTTP Headers**:
   - `Authorization: Bearer` is used to send a JWT (JSON Web Token) for authentication.
   - `Content-Type: application/json` indicates that the request body is in JSON format.
-  - `Accept: application/json` means that the expected response should also be in JSON format.
+  - `Accept: application/json` means the expected response should also be in JSON format.
   - `User-Agent` specifies the application sending the request.
   - `Cache-Control` and `Pragma` disable caching.
 - **Request Body**: A JSON object containing the user information to be created.
@@ -183,7 +188,7 @@ TLS (or SSL) operates in a client-server mode. It helps achieve the following se
 
 ## Going Further
 
-The HTTP protocol is a member of the **TCP/IP** family. TCP/IP is a family of communication protocols used to connect computer systems in a network. It is named after two protocols in the family: Transmission Control Protocol (TCP) and Internet Protocol (IP; yes, like IPv4 and IPv6).
+The HTTP protocol is a member of the **TCP/IP** family. TCP/IP is a family of communication protocols used to connect computer systems in a network. It is named after two of the protocols in the family: Transmission Control Protocol (TCP) and Internet Protocol (IP; yes, like IPv4 and IPv6).
 
 Although TCP/IP and HTTP are not perfectly identical, the following sequence diagram helps to better understand what happens behind a single HTTP request.
 

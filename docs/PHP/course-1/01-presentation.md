@@ -1,18 +1,19 @@
-# Introduction to the subject and objectives
+# Présentation de la matière et des objectifs
 
-The subject revolves around the development, design, and deployment of secure WEB applications. It is fully integrated into the DACS (Deployment of Communicating and Secure Applications) course. Throughout this course, we will learn PHP, a famous web language, as well as one of its frameworks, "Laravel." You will also be sensitized to web security and autonomous application deployment.
+La matière s'oriente et s'organise autour du développement, de la conception et du déploiement d'applications WEB sécurisées. Elle s'imprègne entièrement du parcours DACS (Déploiement d'Applications Communicantes et Sécurisées).
+À travers ce cours, nous apprendrons PHP, célèbre langage du WEB, ainsi qu'un de ses frameworks "Laravel". Vous serrez également sensibilisés à la sécurité WEB ainsi qu'au déploiement autonomme d'application.
 
-Various types of headings indicating the type of content:
-- 📜 Theoretical course
-- ⚙️ Practical course
-- 📚 TD/TP (Tutorial/Practical Work)
-- 📝 Quiz/Exam
+Plusieurs types de titres indiquant le type de contenu :
+- 📜 Cours théorique
+- ⚙️ Cours pratique
+- 📚 TD/TP
+- 📝 Contrôle/QCM
 
 :::info
 
-Comments with instructions will be present throughout the TD/TP to guide you on the responses to provide.
+Des commentaires avec les instructions seront présents tout au long des TD/TP pour vous guider sur les réponses à fournir.
 
-For example:
+Par exemple :
 
 ```php
 <?php
@@ -25,25 +26,25 @@ $ma_var = "toto";
 :::
 
 :::info
-When the following comment is present in a file, **you must provide a link to where you found the answer**.
+Quand le commentaire suivant est présent dans un fichier, **vous devez fournir un lien vers l'endroit où vous avez trouvé la réponse**.
 
 ```php
 /**
- * Link: https://my_link.com
+ * Lien : https://mon_lien.com
  **/
 ```
 
-Generally, you can find the answer on 3 different sites:
-- This site, by clicking on the title of the section, you can retrieve its link. For example: https://phd.julien-cpsn.com/courses/PHP/seance_1#remplacer-une-partie-dun-string-avec-replace
-- On the official PHP documentation. For example: https://www.php.net/manual/en/function.str-replace.php
-- A blog, a forum, or any other online site (so not ChatGPT :)
+Généralement, vous pouvez trouver la réponse sur 3 sites différents :
+- Ce site, en cliquant sur le titre de la partie, vous pourrez récupérer son lien. Par exemple : https://phd.julien-cpsn.com/courses/PHP/seance_1#remplacer-une-partie-dun-string-avec-replace
+- Sur la documentation officielle de PHP. Par exemple : https://www.php.net/manual/en/function.str-replace.php
+- Un blog, un forum, ou n'importe quel autre site en ligne (donc pas ChatGPT :)
 
 :::danger
-**Any unfilled comment will be considered not submitted**.
-- If the assignment to submit is **ungraded**, I will come and ask you the question.
-- If the assignment to submit is **graded**, the response will be counted as incorrect.
+**Tout commentaire non rempli sera considéré non rendu**.
+- Si le travail à rendre est **non-noté**, je viendrai vous poser la question.
+- Si le travail à rendre est **noté**, la réponse sera comptée comme fausse.
 :::
 
 :::tip
-**You will receive a list of items to review shortly before the exam.** If I forget, feel free to remind me.
+**Vous recevrez la liste des éléments à réviser un peu de temps avant l'éxamen.** Si j'oublie, n'hésitez pas à me le rappeler.
 :::

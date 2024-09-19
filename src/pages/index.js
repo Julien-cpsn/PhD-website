@@ -1,5 +1,5 @@
 import Layout from '@theme/Layout';
-import {translate} from "@docusaurus/Translate";
+import Translate, {translate} from "@docusaurus/Translate";
 import Card from "@site/static/js/card";
 import CardColumn from "../../static/js/card-column";
 import React from "react";
@@ -8,7 +8,33 @@ import SeratoDemo from "@site/static/img/serato_demo.png"
 import LaSapienza from "@site/static/img/la_sapienza.png"
 import PHP from "@site/static/img/php.png"
 import "../../src/css/index.css"
+import i18n from "@generated/i18n";
 
+
+const home_paragraph = {
+    fr: <>
+        Je m'appelle <strong>Julien Caposiena</strong>, doctorant au <a href="https://www.citi-lab.fr/" target="_blank">CITI
+        Lab</a> et à l'<a href="https://www.insa-lyon.fr/" target="_blank">INSA Lyon</a>. Mon travail de
+        recherche porte sur la <strong>Conception et développement d’un système d’exploitation open source dédié
+        aux routeurs : vers une architecture convergente système et réseaux</strong>. En parallèle, j'enseigne à
+        l'<a href="https://iut.univ-lyon1.fr/" target="_blank">IUT Lyon 1</a>, où je partage ma passion pour l'informatique
+        et les réseaux avec les étudiants.<br/>
+
+        Sur ce site, vous trouverez mes cours, ainsi que des articles retraçant l’avancée de ma thèse. N'hésitez
+        pas à explorer et à me contacter pour toute question ou collaboration !
+    </>,
+    en: <>
+        My name is <strong>Julien Caposiena</strong>, doctoral student at <a href="https://www.citi-lab.fr/" target="_blank">CITI
+        Lab</a> and at <a href="https://www.insa-lyon.fr/" target="_blank">INSA Lyon</a>. My work
+        research focuses on the <strong>Design and development of a dedicated open source operating system
+        to routers: towards a converged system and network architecture</strong>. At the same time, I teach
+        the <a href="https://iut.univ-lyon1.fr/" target="_blank">IUT Lyon 1</a>, where I share my passion for IT
+        and networks with students.<br/>
+
+        On this site, you will find my courses, as well as articles retracing the progress of my thesis. Don't hesitate
+        not to explore and contact me for any questions or collaboration!
+    </>
+}
 
 const time_table_title = translate({ message: 'Emploi du temps' })
 const time_table_link = `https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FParis&bgcolor=%23ffffff&title=${time_table_title}&src=Zjc3ZDlhZWQwMTZkYmNhMzgyYzdlZjczZmEyMTJlMjU0OTJjNjUwNWM3ODBkOGU5NmY4YjQ5YmM4YjRhOTY2OUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F6BF26`
@@ -25,15 +51,9 @@ export default function Home() {
       description="Page d'accueil">
         <main className="main-page">
             <p>
-                <strong>Bienvenue sur mon site personnel !</strong><br/><br/>
+                <h3><Translate>Bienvenue sur mon site personnel !</Translate></h3><br/>
 
-                Je m'appelle <strong>Julien Caposiena</strong>, doctorant au <a href="https://www.citi-lab.fr/" target="_blank">CITI Lab</a> et à l'<a href="https://www.insa-lyon.fr/" target="_blank">INSA Lyon</a>. Mon travail de
-                recherche porte sur la <strong>Conception et développement d’un système d’exploitation open source dédié
-                aux routeurs : vers une architecture convergente système et réseaux</strong>. En parallèle, j'enseigne à
-                l'<a href="https://iut.univ-lyon1.fr/" target="_blank">IUT Lyon 1</a>, où je partage ma passion pour l'informatique et les réseaux avec les étudiants.<br/>
-
-                Sur ce site, vous trouverez mes cours, ainsi que des articles retraçant l’avancée de ma thèse. N'hésitez
-                pas à explorer et à me contacter pour toute question ou collaboration !
+                <p>{ home_paragraph[i18n.currentLocale] }</p>
             </p>
 
             <div className="main-container">

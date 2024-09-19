@@ -325,6 +325,9 @@
     "message": "Home",
     "description": "The homepage name"
   },
+  "Bienvenue sur mon site personnel !": {
+    "message": "Welcome to my personal website!"
+  },
   "Mes cours": {
     "message": "My courses"
   },

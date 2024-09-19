@@ -1,3 +1,8 @@
+---
+categories:
+- ⚙️ Cours pratique
+---
+
 # ⚙️ | Variables prédéfinies
 
 https://www.php.net/manual/fr/reserved.variables.php

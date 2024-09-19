@@ -1,3 +1,11 @@
+---
+categories:
+- 📜 Cours théorique
+
+references:
+- 📜 | Introduction à PHP
+---
+
 # 📜 | Architecture d'une application web
 
 :::info

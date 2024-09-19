@@ -1,16 +1,16 @@
-# Introduction to the subject and objectives
+# Presentation of the subject and objectives
 
-The subject revolves around the development, design, and deployment of secure WEB applications. It is fully integrated into the DACS (Deployment of Communicating and Secure Applications) course. Throughout this course, we will learn PHP, a famous web language, as well as one of its frameworks, "Laravel." You will also be sensitized to web security and autonomous application deployment.
+The subject is focused on the development, design, and deployment of secure WEB applications. It is fully integrated into the DACS (Deployment of Communicating and Secure Applications) course. Through this course, we will learn PHP, a famous WEB language, as well as one of its frameworks "Laravel". You will also be sensitized to WEB security and autonomous application deployment.
 
-Various types of headings indicating the type of content:
+Several types of headings indicating the type of content:
 - 📜 Theoretical course
 - ⚙️ Practical course
-- 📚 TD/TP (Tutorial/Practical Work)
+- 📚 TD/TP
 - 📝 Quiz/Exam
 
 :::info
 
-Comments with instructions will be present throughout the TD/TP to guide you on the responses to provide.
+Comments with instructions will be present throughout the TD/TP to guide you on the answers to provide.
 
 For example:
 
@@ -40,10 +40,10 @@ Generally, you can find the answer on 3 different sites:
 
 :::danger
 **Any unfilled comment will be considered not submitted**.
-- If the assignment to submit is **ungraded**, I will come and ask you the question.
-- If the assignment to submit is **graded**, the response will be counted as incorrect.
+- If the work to be submitted is **ungraded**, I will come and ask you the question.
+- If the work to be submitted is **graded**, the answer will be counted as incorrect.
 :::
 
 :::tip
-**You will receive a list of items to review shortly before the exam.** If I forget, feel free to remind me.
+**You will receive the list of items to review a little before the exam.** If I forget, feel free to remind me.
 :::

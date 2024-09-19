@@ -1,6 +1,13 @@
+---
+categories:
+- 📜 Theoretical Course
+---
+
 # 📜 | Introduction to PHP
 
-PHP, short for "PHP: Hypertext Preprocessor," is a scripting language primarily designed for web development. PHP was created in 1995 with its first version developed by Rasmus Lerdorf, and since then, it has evolved significantly to become one of the most widely used scripting languages for web development. Written in C, PHP leverages the performance and flexibility offered by this low-level language while providing a simpler and more accessible syntax for web developers. The current version, 8.3.9, incorporates numerous improvements and new features compared to its predecessors, such as performance optimizations, security enhancements, and modern programming capabilities. With these regular updates, PHP continues to adapt to the evolving needs of modern web development and remains a relevant choice for server-side development.
+## What is PHP?
+
+PHP, which stands for "PHP: Hypertext Preprocessor," is a scripting language primarily designed for web development. PHP was created in 1995 with its first version developed by Rasmus Lerdorf, and since then, it has evolved significantly to become one of the most widely used scripting languages for web development. Written in C, PHP leverages the performance and flexibility offered by this low-level language while providing a simpler syntax that is more accessible to web developers. The current version, 8.3.9, incorporates numerous improvements and new features compared to its predecessors, such as performance optimizations, security enhancements, and modern programming capabilities. Through these regular updates, PHP continues to adapt to the evolving needs of modern web development and remains a relevant choice for server-side development.
 
 <details>
     <summary>**Scripting**</summary>
@@ -60,11 +67,28 @@ Always keep the [PHP documentation](https://www.php.net/manual/en/) close by
 </div>
 ```
 
+- - -
+
+Example PHP code:
+
+```php
+<?php
+
+$ma_var = 12;
+
+if ($ma_var == 12) {
+    echo "Coucou !\n";
+}
+else {
+    $ma_var = null;
+}
+```
+
 ## PHP Differences
 
 ### Echo
 
-Printing with `echo` (don't forget to add a `\n` for a new line, as it doesn't automatically go to the next line)
+Printing with `echo` (don't forget to add a `\n` for a new line, as it does not automatically go to the next line)
 
 ```php
 $my_var = "toto";
@@ -76,7 +100,7 @@ echo "Hello it's $my_var\n";
 
 ### Debug
 
-Debug a variable with `var_dump()`. This allows you to display the complete content of the variable when the function is called to fix any potential issues.
+Debug a variable with `var_dump()`. This function displays the complete content of the variable when called, helping to identify any potential issues.
 
 ```php
 $my_var = [1, 2, 5];
@@ -129,7 +153,7 @@ foreach ($mes_valeurs as $index => $var) {
 
 ### Match
 
-Newest, the `match`
+Newer, the `match`
 
 ```php
 $ma_var = 2;
@@ -169,7 +193,7 @@ tonton
 ```
 </details>
 
-### Concatenation Operator "." for Adding Strings
+### "." Operator to Add Strings
 
 To add/concatenate strings in PHP, we use the `.` operator
 

@@ -1,8 +1,8 @@
-# Preface
+# Preamble
 
 This course aims to teach the PHP programming language and the Laravel framework to 2nd year students in the Computer Science and Software Development program at IUT Lyon1.
 
-## Course Outline
+## Schedule
 
 > :::warning
 > The versions of PHP and Laravel used are respectively: **PHP 8.2** and **Laravel 11**
@@ -43,13 +43,13 @@ This course aims to teach the PHP programming language and the Laravel framework
   - Guess the password (simple) -> password is "admin"
   - All Routes Lead To Rome (simple) -> find password in "Rome" file using URL `http://myserv/get_file?filename=../../Rome`
   - Botox injection (medium) -> SQL Injection
-  - XSS (medium) -> XSS Attack
+  - XSS (medium) -> XSS attack
   - Decrypt me (medium) -> Decode base64
-  - MitM (hard) -> Like stealing a token via wireshark
+  - MitM (hard) -> Steal a token using wireshark
 
 ### Session 6 - Framework
 
-- Introduction to the framework concept
+- Introduction to framework concept
 - Lab: Creating a minimalist framework by assembling the previous parts
   - Expected features:
     - Routing
@@ -62,13 +62,13 @@ This course aims to teach the PHP programming language and the Laravel framework
 
 - Introduction to Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), presentation of documentation and ecosystem
 - Mini presentation: Each student presents an element of the Laravel ecosystem (description, usage examples, complexity, popularity, price, reliability)
-- Introduction to the package manager and composer
+- Introduction to package manager and composer
 - Lab: Creating an empty Laravel project
 
 ### Session 8-15 (7 sessions) - Graded Project
 
 - Introduction to the Project Topic
-  - "Creating an application for managing applications and ticketing"
+  - "Creating an application for managing applications and tickets"
   - Alone or in a group of 2
   - Submission on GitHub
   - Use case description:
@@ -112,7 +112,7 @@ Studied reference knowledge
 - Introduction to architectural patterns (e.g., MVC...)
 
 **Targeted Critical Learnings:**
-- AC21.01 | Develop and implement functional and non-functional specifications from requirements
+- AC21.01 | Develop and implement functional and non-functional specifications based on requirements
 - AC21.02 | Apply accessibility and ergonomics principles
 - AC21.03 | Adopt good design and programming practices
 - AC22.03 | Understand the challenges and means of securing data and code
@@ -135,7 +135,7 @@ Targeted Skills:
 - SAÉ 4.Deploi.01 | Deploy and secure services in a network
 
 **Description:**
-The objective of this resource is to present programming components that can be used in various fields.
+The objective of this resource is to present programming components that can be used in various domains.
 
 **Studied reference knowledge:**
 - Architecture patterns (e.g.: MVC, MVVM...)
@@ -144,10 +144,10 @@ The objective of this resource is to present programming components that can be 
 
 **Suggested extensions:**
 - Use of web services (e.g.: asynchronous requests, data exchange formats...)
-- Organization of data access: databases, directories, web services...
+- Organization of data access: databases, directories, Web services...
 
 **Targeted critical learnings:**
-- AC21.01 | Develop and implement functional and non-functional specifications from requirements
+- AC21.01 | Develop and implement functional and non-functional specifications based on requirements
 - AC21.02 | Apply accessibility and ergonomics principles
 - AC21.03 | Adopt good design and programming practices
 - AC23.01 | Design and develop communicating applications

@@ -1,10 +1,18 @@
+---
+categories:
+- 📜 Theoretical course
+---
+
 # 📜 | JSON
 
 :::info
-This part is not to be memorized, but it is a key element in understanding the world of the WEB. **Understanding the different terms mentioned is necessary**.
+This part is not meant to be memorized, but it is a key element in understanding the world of the WEB. **Understanding the different terms mentioned is necessary**.
 :::
 
-**JSON** (JavaScript Object Notation) is a lightweight data format widely used for exchanging information between systems, especially in web applications. It is both easy for humans to read and simple for machines to interpret. JSON is directly derived from the object notation of the JavaScript language. Thus, JSON can be directly used in JavaScript code and vice versa. Although derived from JavaScript syntax, it can be used with many programming languages such as Python, Java, PHP, and Go.
+**JSON** (JavaScript Object Notation) is a lightweight data format widely used for exchanging information between systems, especially in web applications.
+It is both easy to read for humans and simple to interpret for machines.
+JSON is directly derived from the object notation in the JavaScript language. Thus, JSON can be directly used in JavaScript code and vice versa.
+Although it is derived from JavaScript syntax, it can be used with many programming languages such as Python, Java, PHP, and Go.
 
 ### Why use JSON?
 
@@ -80,7 +88,7 @@ Example of a JSON object:
 
 Arrays are ordered lists of values, enclosed in square brackets `[]`. Array elements can be of different types: objects, strings, numbers, booleans, or even other arrays.
 
-Example of a JSON array:
+Example of a JSON table:
 ```json
 [
   "Paris",
@@ -93,7 +101,7 @@ Example of a JSON array:
 
 The data types supported by JSON are:
 
-- **Strings** (string): surrounded by double quotes `""` (e.g. `"name": "Dupont"`).
+- **Strings** (string): surrounded by double quotes `""` (e.g. `"name": "Smith"`).
 - **Numbers** (int, float): integers or decimals without quotes (e.g. `"age": 30`, `"height": 1.80`).
 - **Booleans**: logical values `true` or `false` (e.g. `"isMember": true`).
 - **Null**: to indicate the absence of a value (e.g. `"address": null`).
@@ -102,7 +110,7 @@ The data types supported by JSON are:
 
 ### Usage Examples
 
-JSON is mainly used to exchange data between a **client** (like a browser) and a **server** in web applications. For instance, an API could return a user's information in JSON format when a request is made.
+JSON is mainly used to exchange data between a **client** (such as a browser) and a **server** in web applications. For instance, an API could return a user's information in JSON format when a request is made.
 
 **Example of a JSON response from an API**:
 ```json
@@ -138,7 +146,7 @@ echo json_encode($ma_var);
 <details>
     <summary>🖥️ Output</summary>
 ```json
-{"user":{"id":123,"name":"Dupont","email":"dupont@example.com"},"status":"success"}
+{"user":{"id":123,"name":"Smith","email":"smith@example.com"},"status":"success"}
 ```
 </details>
 

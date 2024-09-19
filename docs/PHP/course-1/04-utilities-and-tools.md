@@ -1,3 +1,8 @@
+---
+categories:
+- ⚙️ Cours pratique
+---
+
 # ⚙️ | Fonctions utilitaires & autres outils
 
 ## Utilitaires pour les string (chaînes de caractères)

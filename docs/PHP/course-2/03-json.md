@@ -1,3 +1,8 @@
+---
+categories:
+- 📜 Cours théorique
+---
+
 # 📜 | Le JSON
 
 :::info

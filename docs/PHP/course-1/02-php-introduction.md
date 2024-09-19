@@ -1,3 +1,8 @@
+---
+categories:
+- 📜 Cours théorique
+---
+
 # 📜 | Introduction à PHP
 
 ## PHP, qu'est-ce que c'est ?
