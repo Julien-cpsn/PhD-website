@@ -1,9 +1,24 @@
 ---
 categories:
 - 📜 Cours théorique
+
+references:
+- 📜 | Le JSON
 ---
 
 # 📜 | Anatomie du protocole HTTP
+
+export const Highlight = ({children, color}) => (
+    <span
+        style={{
+            backgroundColor: color,
+            borderRadius: '2px',
+            color: '#fff',
+            padding: '5px',
+        }}>
+    {children}
+  </span>
+);
 
 :::info
 Cette partie n'est pas à apprendre par cœur, mais elle constitue un élément principal de la compréhension du monde du WEB. **La compréhension des différents termes évoqués est nécessaire**.
@@ -174,6 +189,28 @@ Content-Length: 245
 - **Corps de la requête** (Body) : Un JSON qui contient les informations de l'utilisateur à créer.
 
 Cette requête va ensuite être traitée par le back-end qui disposera alors de toutes ces informations.
+
+## Codes HTTP
+
+La réponse d'une requête arrive avec un code de retour allant de 100 à 527. Le premier chiffre est utilisé pour spécifier une des cinq catégories de réponse :
+
+- <Highlight color="#6495ED">1XX</Highlight> : information
+- <Highlight color="#00A36C">2XX</Highlight> : succès
+- <Highlight color="#7F00FF">3XX</Highlight> : redirection
+- <Highlight color="#FFAC1C">4XX</Highlight> : erreur client
+- <Highlight color="#FF3131">5XX</Highlight> : erreur serveur
+
+Les codes les plus courants sont :
+
+- <Highlight color="#00A36C">200</Highlight> : succès de la requête
+- <Highlight color="#00A36C">201</Highlight> : succès avec création de ressource
+- <Highlight color="#7F00FF">301 et 302</Highlight> : redirection, respectivement permanente et temporaire
+- <Highlight color="#FFAC1C">401</Highlight> : utilisateur non authentifié
+- <Highlight color="#FFAC1C">403</Highlight> : accès refusé
+- <Highlight color="#FFAC1C">404</Highlight> : ressource non trouvée
+- <Highlight color="#FF3131">500, 502 et 503</Highlight> : erreurs serveur
+
+Voir la [liste complète des codes HTTP](https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP)
 
 ## Sécurité avec HTTPS
 

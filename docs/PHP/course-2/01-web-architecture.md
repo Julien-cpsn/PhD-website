@@ -4,6 +4,7 @@ categories:
 
 references:
 - 📜 | Introduction à PHP
+- 📜 | Anatomie du protocole HTTP
 ---
 
 # 📜 | Architecture d'une application web

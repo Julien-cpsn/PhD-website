@@ -64,7 +64,7 @@ article img {
   margin-right: auto!important;
 }*/
 
-details .theme-code-block {
+details div div:first-child:is(.theme-code-block) {
   margin: -16px;
 }
 
