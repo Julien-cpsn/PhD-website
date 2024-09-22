@@ -126,6 +126,8 @@ JSON est principalement utilisé pour échanger des données entre un **client**
 
 ### ⚙️ | Encoder et décoder du JSON en PHP
 
+https://www.php.net/manual/fr/ref.json.php
+
 #### json_encode
 
 Retourne la représentation JSON en string d'une valeur.
@@ -157,7 +159,7 @@ Décode un string content JSON en une variable PHP.
 ```php
 $mon_json = '{"utilisateur":{"id":123,"nom":"Dupont","email":"dupont@example.com"},"status":"success"}';
 
-$ma_var = json_decode($mon_json);
+$ma_var = json_decode($mon_json, true); // Le true permet de transformer les objets en tableau associatif
 
 var_dump($ma_var);
 ```

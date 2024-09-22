@@ -68,9 +68,9 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 ### Séance 8-15 (7 séances) - Projet noté
 
 - Introduction du sujet du Projet
-  - "Création d'une application de gestion d'applications et de tickting"
-  - Seul ou en groupe de 2
-  - Rendu sur GitHub
+  - "Création d'une application de gestion de projet informatique et de tickting"
+  - Seul ou en duo
+  - Rendu sur GitHub et Dockerhub
   - Description de cas d'usages :
     - Le développeur et l'admin peuvent créer une application. Seul l'admin peut supprimer une application
       - L'application est liée à plusieurs utilisateurs, possède un nom, une description et un état (en développement, en test, déployée, en maintenance)
