@@ -1,7 +1,7 @@
 # Présentation de la matière et des objectifs
 
 La matière s'oriente et s'organise autour du développement, de la conception et du déploiement d'applications WEB sécurisées. Elle s'imprègne entièrement du parcours DACS (Déploiement d'Applications Communicantes et Sécurisées).
-À travers ce cours, nous apprendrons PHP, célèbre langage du WEB, ainsi qu'un de ses frameworks "Laravel". Vous serrez également sensibilisés à la sécurité WEB ainsi qu'au déploiement autonomme d'application.
+À travers ce cours, nous apprendrons PHP, célèbre langage du WEB, ainsi qu'un de ses frameworks "Laravel". Vous serez également sensibilisés à la sécurité WEB ainsi qu'au déploiement autonome d'application.
 
 Plusieurs types de titres indiquant le type de contenu :
 - 📜 Cours théorique
