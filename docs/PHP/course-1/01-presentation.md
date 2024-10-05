@@ -46,5 +46,5 @@ Généralement, vous pouvez trouver la réponse sur 3 sites différents :
 :::
 
 :::tip
-**Vous recevrez la liste des éléments à réviser un peu de temps avant l'éxamen.** Si j'oublie, n'hésitez pas à me le rappeler.
+**Vous recevrez la liste des éléments à réviser un peu de temps avant l'examen.** Si j'oublie, n'hésitez pas à me le rappeler.
 :::
