@@ -1,0 +1,18 @@
+@startwbs
+
+* **API REST**\n/api
+** Utilisateurs
+*** **GET** /utilisateurs : Liste des utilisateurs
+*** **POST** /utilisateurs : Créer un utilisateur
+*** **GET** /utilisateurs/{id} : Récupérer un utilisateur
+**** **PUT** /utilisateurs/{id}/mot-de-passe\nModifier le mot-de-passe d'un utilisateur
+*** **PUT** /utilisateurs/{id} : Modifier un utilisateur
+*** **DELETE** /utilisateurs/{id} : Supprimer un utilisateur
+** Articles
+*** **GET** /articles : Liste des articles
+*** **POST** /articles : Créer un article
+*** **GET** /articles/{id} : Récupérer un article
+*** **PUT** /articles/{id} : Modifier un article
+*** **DELETE** /articles/{id} : Supprimer un article
+
+@endwbs
