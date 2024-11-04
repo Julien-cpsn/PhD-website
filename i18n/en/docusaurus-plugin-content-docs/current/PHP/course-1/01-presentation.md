@@ -5,7 +5,7 @@ The subject is focused on the development, design, and deployment of secure WEB 
 Several types of headings indicating the type of content:
 - 📜 Theoretical course
 - ⚙️ Practical course
-- 📚 TD/TP
+- 📚 TD/TP (Tutorial/Practical Work)
 - 📝 Quiz/Exam
 
 :::info
@@ -17,9 +17,9 @@ For example:
 ```php
 <?php
 
-$ma_var = "toto";
+$my_var = "toto";
 
-// Ici, il faut afficher $ma_var
+// Here, you need to display $my_var
 ...
 ```
 :::
@@ -34,7 +34,7 @@ When the following comment is present in a file, **you must provide a link to wh
 ```
 
 Generally, you can find the answer on 3 different sites:
-- This site, by clicking on the title of the section, you can retrieve its link. For example: https://phd.julien-cpsn.com/courses/PHP/seance_1#remplacer-une-partie-dun-string-avec-replace
+- This site, by clicking on the title of the section, you can retrieve its link. For example: https://phd.julien-cpsn.com/courses/PHP/seance_1#replace-a-part-of-a-string-with-replace
 - On the official PHP documentation. For example: https://www.php.net/manual/en/function.str-replace.php
 - A blog, a forum, or any other online site (so not ChatGPT :)
 
@@ -45,5 +45,5 @@ Generally, you can find the answer on 3 different sites:
 :::
 
 :::tip
-**You will receive the list of items to review a little before the exam.** If I forget, feel free to remind me.
+**You will receive a list of items to review some time before the exam.** If I forget, feel free to remind me.
 :::

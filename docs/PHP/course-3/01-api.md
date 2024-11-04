@@ -9,7 +9,7 @@ categories:
 Cette partie n'est pas à apprendre en détails. Cependant, **la compréhension des différents termes évoqués est nécessaire**.
 :::
 
-# API
+## API
 
 Une **API** (Interface de Programmation d'Application) est un ensemble de règles et de conventions qui permet à différentes applications ou services de communiquer entre eux. Les API sont devenues une composante essentielle du développement logiciel moderne, permettant aux applications d'interagir avec des services web, des bases de données, ou même d'autres applications. Elles standardisent les échanges de données, facilitant ainsi l'intégration et l'extension des fonctionnalités.
 

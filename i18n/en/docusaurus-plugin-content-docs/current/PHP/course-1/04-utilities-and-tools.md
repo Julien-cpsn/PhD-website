@@ -5,11 +5,11 @@ categories:
 
 # ⚙️ | Utility Functions & Other Tools
 
-## Utilities for strings
+## String Utilities
 
 [Link to PHP documentation](https://www.php.net/manual/en/ref.strings.php)
 
-### String length
+### String Length
 
 Calculates the length of a string.
 
@@ -25,16 +25,16 @@ echo strlen($my_string);
 ```
 </details>
 
-### Uppercase or lowercase string
+### Uppercase and Lowercase String
 
-Returns a string in uppercase or lowercase.
+Converts a string to uppercase or lowercase.
 
 ```php
-$ma_var = "toto";
-echo strtoupper($ma_var) . "\n";
+$my_var = "toto";
+echo strtoupper($my_var) . "\n";
 
-$ma_var = "TATA";
-echo strtolower($ma_var);
+$my_var = "TATA";
+echo strtolower($my_var);
 ```
 
 <details>
@@ -45,20 +45,20 @@ tata
 ```
 </details>
 
-### Split with explode and join with implode
+### Splitting with explode and Joining with implode
 
 Splits or joins a string into segments.
 
 ```php
-$ma_var = "toto;tata;tonton";
+$my_var = "toto;tata;tonton";
 
-// Séparer un string vers un tableau
-$mon_tableau = explode(";", $ma_var);
-var_dump($mon_tableau);
+// Split a string into an array
+$my_array = explode(";", $my_var);
+var_dump($my_array);
 
-// Regrouper des éléments d'un tableau vers un string
-$mon_autre_var = implode(";", $mon_tableau);
-echo $mon_autre_var;
+// Join array elements into a string
+$my_other_var = implode(";", $my_array);
+echo $my_other_var;
 ```
 
 <details>
@@ -69,12 +69,12 @@ toto;tata;tonton
 ```
 </details>
 
-### Remove extra spaces with trim
+### Removing Extra Spaces with trim
 
 ```php
 $my_var = "   toto    ";
 $my_other_var = trim($my_var);
-echo $my_var;
+echo $my_other_var;
 ```
 
 <details>
@@ -84,14 +84,14 @@ toto
 ```
 </details>
 
-There is also ltrim (left trim) to remove spaces only at the beginning, and rtrim (right trim) to remove spaces only at the end.
+There are also `ltrim` (left trim) to remove spaces only at the beginning, and `rtrim` (right trim) to remove spaces only at the end.
 
-### Replace part of a string with replace
+### Replacing Part of a String with replace
 
 ```php
 $my_var = "toto";
 $my_other_var = str_replace("o", "a", $my_var);
-echo $my_var;
+echo $my_other_var;
 ```
 
 <details>
@@ -101,14 +101,14 @@ tata
 ```
 </details>
 
-## Utilities for int and float (numbers)
+## Integer and Float Utilities
 
-### Convert a variable to int or float
+### Converting a Variable to int or float
 
 ```php
 $my_var = "10";
 $my_int = intval($my_var);
-var_dump($my_var);
+var_dump($my_int);
 ```
 
 <details>
@@ -122,14 +122,14 @@ Same principle with `floatval()`
 
 ## Other utilities
 
-### Check the type of a variable
+### Checking the type of a variable
 
 - `is_array()` — Determines if a variable is an array
 - `is_bool()` — Determines if a variable is a boolean
-- `is_callable()` — Determines if a value can be called as a function in the current scope
-- `is_countable()` — Checks if the contents of the variable are countable
-- `is_float()` — Determines if a variable is a floating-point number
-- `is_int()` — Determines if a variable is an integer
+- `is_callable()` — Determines if a value can be called as a function in the current scope.
+- `is_countable()` — Checks if the variable's contents are countable
+- `is_float()` — Determines if a variable is a float number
+- `is_int()` — Determines if a variable is an integer number
 - `is_numeric()` — Determines if a variable is a number or a numeric string
 
 ```php
@@ -147,11 +147,11 @@ bool(false)
 
 ### Checking if a variable exists (and if it is empty)
 
-`isset()` determines if a variable is considered set, which means it is declared and is not `null`.
+`isset()` determines if a variable is considered defined, meaning it is declared and is not `null`.
 
 ```php
-$is_my_var_set = isset($my_var);
-var_dump($is_my_var_set);
+$is_my_var_existing = isset($my_var)
+var_dump($is_my_var_existing)
 ```
 
 <details>
@@ -161,15 +161,15 @@ bool(false)
 ```
 </details>
 
-`empty()` determines if a variable is considered set and if its value is equivalent to `false`.
+`empty()` determines if a variable is considered defined and if its value is equal to `false`.
 
 ```php
-$mon_tableau = ["toto", "tata", false]
+$my_array = ["toto", "tata", false]
 
-$est_ce_que_toto_existe = empty($mon_tableau[0])
-$est_ce_que_tonton_existe = empty($mon_tableau[2])
-var_dump($est_ce_que_toto_existe)
-var_dump($est_ce_que_tonton_existe)
+$is_toto_existing = empty($my_array[0])
+$is_uncle_existing = empty($my_array[2])
+var_dump($is_toto_existing)
+var_dump($is_uncle_existing)
 ```
 
 <details>

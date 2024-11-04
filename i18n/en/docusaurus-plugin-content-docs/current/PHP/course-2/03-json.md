@@ -1,6 +1,6 @@
 ---
 categories:
-- 📜 Theoretical course
+- 📜 Theoretical Course
 ---
 
 # 📜 | JSON
@@ -19,7 +19,7 @@ Although it is derived from JavaScript syntax, it can be used with many programm
 <details>
   <summary>**Readability**</summary>
 
-JSON is encoded in UTF-8 (i.e., not in bytes like 0xf6 0x3a). Its clear syntax makes it easy to read for humans.
+JSON is encoded in UTF-8 (not in bytes like 0xf6 0x3a). Its clear syntax makes it easy to read for humans.
 </details>
 
 <details>
@@ -64,7 +64,7 @@ JSON is natively supported by most modern programming languages, making it easie
 <details>
   <summary>**API Interactions**</summary>
 
-JSON has become the standard for data exchange in modern web APIs.
+JSON has become the standard for exchanging data in modern web APIs.
 </details>
 
 ### JSON Structure
@@ -73,14 +73,14 @@ JSON consists of two main structures, objects and arrays.
 
 #### Objects
 
-Objects are collections of key-value pairs, enclosed in curly braces `{}`. Each key is a string (text) followed by a value (which can be of different types).
+Objects are collections of key-value pairs, enclosed in curly braces `{}`. Each key is a string and is followed by a value (which can be of different types).
 
 Example of a JSON object:
 ```json
 {
-  "nom": "Dupont",
+  "name": "Dupont",
   "age": 30,
-  "estMembre": true
+  "isMember": true
 }
 ```
 
@@ -88,11 +88,11 @@ Example of a JSON object:
 
 Arrays are ordered lists of values, enclosed in square brackets `[]`. Array elements can be of different types: objects, strings, numbers, booleans, or even other arrays.
 
-Example of a JSON table:
+Example of a JSON array:
 ```json
 [
   "Paris",
-  "Londres",
+  "London",
   "Tokyo"
 ]
 ```
@@ -101,23 +101,23 @@ Example of a JSON table:
 
 The data types supported by JSON are:
 
-- **Strings** (string): surrounded by double quotes `""` (e.g. `"name": "Smith"`).
-- **Numbers** (int, float): integers or decimals without quotes (e.g. `"age": 30`, `"height": 1.80`).
-- **Booleans**: logical values `true` or `false` (e.g. `"isMember": true`).
-- **Null**: to indicate the absence of a value (e.g. `"address": null`).
-- **Objects**: collections of key-value pairs, surrounded by curly braces `{}`.
-- **Arrays**: ordered lists, surrounded by square brackets `[]`.
+- **Strings** (string): enclosed in double quotes `""` (e.g., `"name": "Dupont"`).
+- **Numbers** (int, float): integers or decimals without quotes (e.g., `"age": 30`, `"height": 1.80`).
+- **Booleans**: logical values `true` or `false` (e.g., `"isMember": true`).
+- **Null**: to indicate the absence of a value (e.g., `"address": null`).
+- **Objects**: collections of key-value pairs, enclosed in curly braces `{}`.
+- **Arrays**: ordered lists, enclosed in square brackets `[]`.
 
 ### Usage Examples
 
-JSON is mainly used to exchange data between a **client** (such as a browser) and a **server** in web applications. For instance, an API could return a user's information in JSON format when a request is made.
+JSON is mainly used to exchange data between a **client** (like a browser) and a **server** in web applications. For instance, an API could return a user's information in JSON format when a request is made.
 
 **Example of a JSON response from an API**:
 ```json
 {
-  "utilisateur": {
+  "user": {
     "id": 123,
-    "nom": "Dupont",
+    "name": "Dupont",
     "email": "dupont@example.com"
   },
   "status": "success"
@@ -126,27 +126,29 @@ JSON is mainly used to exchange data between a **client** (such as a browser) an
 
 ### ⚙️ | Encoding and Decoding JSON in PHP
 
+https://www.php.net/manual/en/ref.json.php
+
 #### json_encode
 
-Returns the JSON representation as a string of a value.
+Returns the JSON representation in string of a value.
 
 ```php
-$ma_var = [
-    "utilisateur" => [
+$my_var = [
+    "user" => [
         "id" => 123,
-        "nom" => "Dupont",
+        "name" => "Dupont",
         "email" => "dupont@example.com"
     ],
     "status" => "success"
 ];
 
-echo json_encode($ma_var);
+echo json_encode($my_var);
 ```
 
 <details>
     <summary>🖥️ Output</summary>
 ```json
-{"user":{"id":123,"name":"Smith","email":"smith@example.com"},"status":"success"}
+{"user":{"id":123,"name":"Dupont","email":"dupont@example.com"},"status":"success"}
 ```
 </details>
 
@@ -155,22 +157,22 @@ echo json_encode($ma_var);
 Decodes a JSON content string into a PHP variable.
 
 ```php
-$mon_json = '{"utilisateur":{"id":123,"nom":"Dupont","email":"dupont@example.com"},"status":"success"}';
+$my_json = '{"user":{"id":123,"name":"Dupont","email":"dupont@example.com"},"status":"success"}';
 
-$ma_var = json_decode($mon_json);
+$my_var = json_decode($my_json, true); // The true allows to transform objects into associative arrays
 
-var_dump($ma_var);
+var_dump($my_var);
 ```
 
 <details>
     <summary>🖥️ Output</summary>
-```
+```php
 object(stdClass)#2 (2) {
-  ["utilisateur"]=>
+  ["user"]=>
   object(stdClass)#1 (3) {
     ["id"]=>
     int(123)
-    ["nom"]=>
+    ["name"]=>
     string(6) "Dupont"
     ["email"]=>
     string(18) "dupont@example.com"

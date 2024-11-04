@@ -1,9 +1,24 @@
 ---
 categories:
-- 📜 Theoretical course
+- 📜 Theoretical Course
+
+references:
+- 📜 | JSON
 ---
 
 # 📜 | Anatomy of the HTTP Protocol
+
+export const Highlight = ({children, color}) => (
+    <span
+        style={{
+            backgroundColor: color,
+            borderRadius: '2px',
+            color: '#fff',
+            padding: '5px',
+        }}>
+    {children}
+  </span>
+);
 
 :::info
 This part is not to be memorized, but it is a key element in understanding the world of the WEB. **Understanding the different terms mentioned is necessary**.
@@ -30,7 +45,7 @@ The request line is the first line of the HTTP request. It contains three key pi
     - `DELETE`: to delete a resource.
     - `PATCH`: to partially update a resource.
 
-- **URI (Uniform Resource Identifier)**: this is the address of the requested resource, often referred to as the path or endpoint. For example, `/articles/42` refers to article number 42.
+- **URI (Uniform Resource Identifier)**: it is the address of the requested resource, often referred to as the path or endpoint. For example, `/articles/42` refers to article number 42.
 
 - **HTTP Protocol Version**: typically `HTTP/1.1` or `HTTP/2`, this information specifies which version of the protocol is being used.
 
@@ -41,12 +56,12 @@ GET /articles/42 HTTP/1.1
 
 ### Request Headers
 
-Request headers provide additional information about the request, such as the type of content being sent, necessary permissions, or information about the client. Each header is a key-value pair.
+Request headers provide additional information about the request, such as the type of content being sent, necessary authorizations, or client information. Each header is a key-value pair.
 
 Common headers include:
 
 - **Host**: the server's address (e.g., `www.example.com`).
-- **User-Agent**: information about the client, such as the type of browser being used.
+- **User-Agent**: client information, such as the type of browser being used.
 - **Accept**: specifies the type of content the client can accept (e.g., `text/html`, `application/json`).
 - **Content-Type**: indicates the type of data sent in the request body (useful for `POST` or `PUT`, e.g., `application/json`).
 - **Authorization**: contains authentication information.
@@ -60,21 +75,21 @@ Accept: application/json
 
 ### Request Body
 
-The request body is an optional part that contains data sent to the server, for example during a `POST` or `PUT` request. This data can be in various formats (JSON, XML, encoded form, etc). For a `GET` request, the request body is usually absent as the data is passed in the URI (via query parameters).
+The request body is an optional part that contains data sent to the server, for example in a `POST` or `PUT` request. This data can be in various formats (JSON, XML, form-encoded, etc.). For a `GET` request, the request body is usually absent as the data is passed in the URI (via query parameters).
 
 **Example** (in a `POST` request):
 ```json
 {
-  "title": "Nouvel Article",
-  "content": "Contenu de l'article..."
+  "title": "New Article",
+  "content": "Article content..."
 }
 ```
 
 ## The HTTP Request Cycle
 
-When the client (the browser or an application) sends an HTTP request, here are the main steps that occur:
+When the client (browser or application) sends an HTTP request, here are the main steps that occur:
 
-1. **User interacts with the interface** (e.g., by clicking on a link or a form submission button).
+1. **User interacts with the interface** (e.g., clicking on a link or a form submission button).
 2. **Browser sends an HTTP request** to the specified server, containing the request line, headers, and, in some cases, a request body.
 3. **Server receives the request**, interprets it, and performs necessary actions (retrieve data from a database, perform calculations, etc.).
 4. **Server sends an HTTP response** to the client, containing the requested data or an error message if the request cannot be processed.
@@ -104,8 +119,8 @@ Content-Length: 126
 
 {
   "id": 42,
-  "title": "Nouvel Article",
-  "content": "Voici le contenu de l'article."
+  "title": "New Article",
+  "content": "Here is the content of the article."
 }
 ```
 
@@ -119,7 +134,7 @@ In this example:
 
 HTTP methods, also known as HTTP verbs, specify the type of action to be performed on a given resource. Here is an overview of the most commonly used methods:
 
-- **GET**: Used to retrieve information from a resource. A `GET` request should not alter the state of the resource.
+- **GET**: Used to retrieve information from a resource. A `GET` request should not change the state of the resource.
 
 - **POST**: Used to send data to the server, for example, to create a new resource. It is often used to submit forms or JSON data.
 
@@ -131,7 +146,7 @@ HTTP methods, also known as HTTP verbs, specify the type of action to be perform
 
 ## Important Headers in an HTTP Request
 
-Some headers play a crucial role in processing HTTP requests:
+Certain headers play a crucial role in processing HTTP requests:
 
 - **Cache-Control**: Manages the caching behavior of resources. For example, it can instruct the browser whether to store a copy of the resource and for how long.
 
@@ -141,7 +156,7 @@ Some headers play a crucial role in processing HTTP requests:
 
 ## Complete Example
 
-Here is a more complex example to see what an HTTP request might look like in a real-world scenario:
+Here is a more complex example to understand what an HTTP request might look like in a real-world scenario:
 
 ```http
 POST /api/v1/users/create?notify=true&admin=false HTTP/1.1
@@ -163,8 +178,8 @@ Content-Length: 245
 }
 ```
 - **HTTP Method**: `POST` is used here to create a new resource (a user).
-- **API Endpoint**: `/api/v1/users/create` indicates the URL of the endpoint.
-  - **Query Parameters**: `?notify=true&admin=false` specifies that the user should be notified and should not be created as an administrator.
+- **API Path**: `/api/v1/users/create` indicates the endpoint URL.
+  - **Query Parameters**: `?notify=true&admin=false` specifies that the user should be notified and not created as an administrator.
 - **HTTP Headers**:
   - `Authorization: Bearer` is used to send a JWT (JSON Web Token) for authentication.
   - `Content-Type: application/json` indicates that the request body is in JSON format.
@@ -173,13 +188,35 @@ Content-Length: 245
   - `Cache-Control` and `Pragma` disable caching.
 - **Request Body**: A JSON object containing the user information to be created.
 
-This request will then be processed by the backend, which will have all this information.
+This request will then be processed by the backend, which will have access to all this information.
+
+## HTTP Status Codes
+
+The response to a request comes with a status code ranging from 100 to 527. The first digit is used to specify one of the five response categories:
+
+- <Highlight color="#6495ED">1XX</Highlight> : informational
+- <Highlight color="#00A36C">2XX</Highlight> : success
+- <Highlight color="#7F00FF">3XX</Highlight> : redirection
+- <Highlight color="#FFAC1C">4XX</Highlight> : client error
+- <Highlight color="#FF3131">5XX</Highlight> : server error
+
+The most common status codes are:
+
+- <Highlight color="#00A36C">200</Highlight> : successful request
+- <Highlight color="#00A36C">201</Highlight> : success with resource creation
+- <Highlight color="#7F00FF">301 and 302</Highlight> : redirection, permanent and temporary respectively
+- <Highlight color="#FFAC1C">401</Highlight> : user not authenticated
+- <Highlight color="#FFAC1C">403</Highlight> : access denied
+- <Highlight color="#FFAC1C">404</Highlight> : resource not found
+- <Highlight color="#FF3131">500, 502, and 503</Highlight> : server errors
+
+See the [complete list of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 ## Security with HTTPS
 
-**HTTPS** (Hypertext Transfer Protocol Secure) is the combination of HTTP with a layer of TLS encryption. HTTPS allows the visitor to verify the identity of the website they are accessing, thanks to an authentication certificate issued by a trusted third-party authority.
+**HTTPS** (Hypertext Transfer Protocol Secure) is the combination of HTTP with a layer of encryption called **TLS**. HTTPS allows the visitor to verify the identity of the website they are accessing, thanks to an authentication certificate issued by a trusted third-party authority.
 
-TLS (or SSL) operates in a client-server mode. It helps achieve the following security objectives:
+TLS (or SSL) operates in a client-server mode. It aims to achieve the following security objectives:
 
 - Server authentication
 - Confidentiality of exchanged data (or encrypted session)

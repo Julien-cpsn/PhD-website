@@ -7,7 +7,7 @@ categories:
 
 ## What is PHP?
 
-PHP, which stands for "PHP: Hypertext Preprocessor," is a scripting language primarily designed for web development. PHP was created in 1995 with its first version developed by Rasmus Lerdorf, and since then, it has evolved significantly to become one of the most widely used scripting languages for web development. Written in C, PHP leverages the performance and flexibility offered by this low-level language while providing a simpler syntax that is more accessible to web developers. The current version, 8.3.9, incorporates numerous improvements and new features compared to its predecessors, such as performance optimizations, security enhancements, and modern programming capabilities. Through these regular updates, PHP continues to adapt to the evolving needs of modern web development and remains a relevant choice for server-side development.
+PHP, which stands for "PHP: Hypertext Preprocessor," is a scripting language primarily designed for web development. PHP was created in 1995 with its first version developed by Rasmus Lerdorf, and since then, it has evolved significantly to become one of the most widely used scripting languages for web development. Written in C, PHP leverages the performance and flexibility offered by this low-level language while providing a simpler syntax that is more accessible to web developers. The current version, 8.3.9, includes numerous improvements and new features compared to its predecessors, such as performance optimizations, security enhancements, and modern programming capabilities. With these regular updates, PHP continues to adapt to the evolving needs of modern web development and remains a relevant choice for server-side development.
 
 <details>
     <summary>**Scripting**</summary>
@@ -58,29 +58,29 @@ Always keep the [PHP documentation](https://www.php.net/manual/en/) close by
 - Semicolon at the end of lines
 - Naming convention is snake_case, e.g., `my_super_function`
 - All files start with `<?php`, and can end with `?>`
-- It is possible to use `<?php ... ?>` tags within HTML (always in a `.php` file)
+- It is possible to include `<?php ... ?>` tags in HTML (always in a `.php` file)
 
 ```php
 <div>
-    <p>Mon paragraphe</p>
-    <div><?php echo $ma_var; ?></div>
+    <p>My paragraph</p>
+    <div><?php echo $my_var; ?></div>
 </div>
 ```
 
 - - -
 
-Example PHP code:
+Example of PHP code:
 
 ```php
 <?php
 
-$ma_var = 12;
+$my_var = 12;
 
-if ($ma_var == 12) {
-    echo "Coucou !\n";
+if ($my_var == 12) {
+    echo "Hello!\n";
 }
 else {
-    $ma_var = null;
+    $my_var = null;
 }
 ```
 
@@ -93,14 +93,14 @@ Printing with `echo` (don't forget to add a `\n` for a new line, as it does not 
 ```php
 $my_var = "toto";
 echo $my_var;
-echo "Hello it's $my_var\n";
+echo "Hi there, $my_var\n";
 ```
 
 ![echo.png](../resources/echo.png)
 
 ### Debug
 
-Debug a variable with `var_dump()`. This function displays the complete content of the variable when called, helping to identify any potential issues.
+Debug a variable with `var_dump()`. This function displays the complete content of the variable when called, helping to identify and fix any issues.
 
 ```php
 $my_var = [1, 2, 5];
@@ -111,12 +111,12 @@ var_dump($my_var);
 
 ### For each
 
-The `for each` loop
+The `for each` loop ("for each")
 
 ```php
-$mes_valeurs = [1, 2, 3, 4];
+$my_values = [1, 2, 3, 4];
 
-foreach ($mes_valeurs as $var) {
+foreach ($my_values as $var) {
     echo "$var\n";
 }
 ```
@@ -134,9 +134,9 @@ foreach ($mes_valeurs as $var) {
 It is also possible to use a key
 
 ```php
-$mes_valeurs = [10, 11, 12, 13];
+$my_values = [10, 11, 12, 13];
 
-foreach ($mes_valeurs as $index => $var) {
+foreach ($my_values as $index => $var) {
     echo "$index: $var\n";
 }
 ```
@@ -153,18 +153,18 @@ foreach ($mes_valeurs as $index => $var) {
 
 ### Match
 
-Newer, the `match`
+Newer, the `match` statement
 
 ```php
-$ma_var = 2;
+$my_var = 2;
 
-$mon_autre_var = match ($ma_var) {
+$my_other_var = match ($my_var) {
     1, 2 => "toto",
-    $ma_var > 10 => "tata",
-    default => "cas par défaut"
+    $my_var > 10 => "tata",
+    default => "default case"
 };
 
-echo $mon_autre_var;
+echo $my_other_var;
 ```
 <details>
     <summary>🖥️ Output</summary>
@@ -178,22 +178,22 @@ toto
 To create arrays with custom indexes (like a dictionary)
 
 ```php
-$ma_var = [
+$my_var = [
     0 => "toto",
-    "mon index 1" => "tata",
-    "mon autre index" => "tonton" 
+    "my index 1" => "tata",
+    "my other index" => "uncle" 
 ];
 
-echo $ma_var["mon autre index"];
+echo $my_var["my other index"];
 ```
 <details>
     <summary>🖥️ Output</summary>
 ```
-tonton
+uncle
 ```
 </details>
 
-### "." Operator to Add Strings
+### "." Operator for String Concatenation
 
 To add/concatenate strings in PHP, we use the `.` operator
 

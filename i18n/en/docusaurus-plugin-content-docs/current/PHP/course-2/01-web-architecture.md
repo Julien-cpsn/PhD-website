@@ -1,12 +1,13 @@
 ---
 categories:
-- 📜 Theoretical course
+- 📜 Theoretical Course
 
 references:
 - 📜 | Introduction to PHP
+- 📜 | Anatomy of the HTTP Protocol
 ---
 
-# 📜 | Web application architecture
+# 📜 | Architecture of a web application
 
 :::info
 This part is not to be learned in detail. However, **understanding the different terms mentioned is necessary**.
@@ -30,18 +31,17 @@ Let's imagine a bakery to illustrate how a web application works.
 - The **client** is simply the person who enters the bakery.
 - The **saleswoman** represents the **front-end**.
 - The **baker** in the kitchen corresponds to the **back-end**.
-- The **resource stock** represents the **database**.
+- The **stock of resources** represents the **database**.
 
 The saleswoman takes the client's order (like the front-end capturing user actions) and, if necessary, sends a request to the baker.
-The baker then prepares the bread or checks in the resource stock to see if he has the necessary ingredients or products.
+The baker then prepares the bread or checks in the stock of resources to see if he has the necessary ingredients or products.
 Once the request is processed, the baker hands the bread to the saleswoman, who gives it to the client, just like the front-end displays the results after the back-end has processed the data.
-At no point does the client interact with the baker or the resource stock.
+At no point does the client interact with the baker or the stock of resources.
 :::
 
 ## The role of the client
 
 The **client** represents the user who interacts with a web application using a browser. It sends actions, usually in the form of clicks, form submissions, or other interactions with the visual interface. The client only performs actions, without direct access to data processing or application logic. Everything the client sees is limited to the user interface visible in the browser.
-
 
 ## Front-End: Client-Side
 
@@ -58,7 +58,7 @@ The front-end is **mandatory**. Without HTML, there is no website (and therefore
 :::
 
 :::warning
-As mentioned in session 1, PHP runs on the server side. Even if PHP is used for front-end tasks, the page rendering occurs on the server side, and then the client receives the previously created HTML/CSS/JS. This concept is known as **Server Side Rendering** (or **SSR**).
+As mentioned in session 1, PHP runs on the server side. Even if PHP is used for front-end tasks, the page rendering occurs on the server side, and then the client receives the HTML/CSS/JS created beforehand. This concept is called **Server Side Rendering** (or **SSR**).
 :::
 
 :::danger
@@ -67,7 +67,7 @@ As mentioned in session 1, PHP runs on the server side. Even if PHP is used for 
 
 ## Back-End: Server-Side
 
-The **back-end** is the hidden part of the application that handles request processing. This is where the business logic and application rules reside. Different languages can be used to code the server logic, including:
+The **back-end** is the hidden part of the application that handles request processing. This is where the business logic and application rules reside. Different languages can be used to code server-side logic, including:
 
 - **PHP**: often used to manage dynamic sites and interact with databases.
 - **Java**: used for robust and large-scale applications.
@@ -85,7 +85,7 @@ The **database** is where information is stored. It allows data to be saved in a
 
 - **PostgreSQL**: a very powerful relational database.
 - **MySQL**: another relational database, very popular for projects of various sizes.
-- **MongoDB**: a non-relational database (NoSQL), ideal for storing JSON documents and semi-structured data.
+- **MongoDB**: a non-relational (NoSQL) database, ideal for storing JSON documents and semi-structured data.
 
 The back-end sends **SQL queries** to the database to retrieve or modify data according to the application's needs. Once the data is retrieved or modified, it is sent back to the back-end, which processes and formats it before transmitting it to the front-end.
 
@@ -103,8 +103,8 @@ To summarize, the processing cycle of a web application unfolds as follows:
 4. The **database** returns the data to the **back-end**, which formats it into an **HTTP response**.
 5. The **back-end** sends this response to the **front-end**, which updates the interface and displays relevant information to the **client**.
 
-This interaction model is typical of the majority of modern web applications and relies on a clear division of roles between the different layers for better code organization and maintainability.
+This interaction model is typical of the majority of modern web applications and is based on a clear division of roles between the different layers for better code organization and maintainability.
 
 ## Stack & Full-stack
 
-The term **WEB stack** corresponds to the entire front-end, back-end, and database (or even the administration of these systems). A **full-stack** developer is a developer who masters and uses all these aspects.
+The term **web stack** corresponds to the entire front-end, back-end, and database (or even the administration of these systems). A **full-stack** developer is a developer who masters and uses all these aspects.
