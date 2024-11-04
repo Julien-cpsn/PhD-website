@@ -17,7 +17,7 @@ An HTTP request is divided into several distinct parts, each with a specific rol
 
 Here is a diagram to facilitate understanding throughout the explanation:
 
-![HTTP Protocol Diagram](../images/http_protocol.png)
+![HTTP Protocol Diagram](../resources/http_protocol.png)
 
 ### Request Line
 
@@ -192,4 +192,4 @@ The HTTP protocol is a member of the **TCP/IP** family. TCP/IP is a family of co
 
 Although TCP/IP and HTTP are not perfectly identical, the following sequence diagram helps to better understand what happens behind a single HTTP request.
 
-![TCP/IP Sequence Diagram](../images/tcp_sequence_diagram.png)
+![TCP/IP Sequence Diagram](../resources/tcp_sequence_diagram.png)

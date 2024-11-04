@@ -44,7 +44,7 @@ PHP, which stands for "PHP: Hypertext Preprocessor," is a scripting language pri
 
     Note that PHP only runs on the server side: **the code is interpreted on the server**, and then the **result is sent back to the client** (web browser), making it an ideal language for creating dynamic web pages.
 
-![Client-Server Diagram](../images/client_serveur.svg)
+![Client-Server Diagram](../resources/client_serveur.svg)
 </details>
 
 ## Coding in PHP
@@ -96,7 +96,7 @@ echo $my_var;
 echo "Hello it's $my_var\n";
 ```
 
-![echo.png](../images/echo.png)
+![echo.png](../resources/echo.png)
 
 ### Debug
 
@@ -107,7 +107,7 @@ $my_var = [1, 2, 5];
 var_dump($my_var);
 ```
 
-![var_dump.png](../images/var_dump.png)
+![var_dump.png](../resources/var_dump.png)
 
 ### For each
 

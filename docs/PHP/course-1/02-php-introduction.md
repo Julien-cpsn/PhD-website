@@ -44,7 +44,7 @@ PHP, acronyme de "PHP: Hypertext Preprocessor", est un langage de script princip
 
     À noter que PHP s'exécute uniquement côté serveur : **le code est interprété sur le serveur**, puis le **résultat est renvoyé au client** (navigateur web), ce qui en fait un langage idéal pour la création de pages web dynamiques.
 
-![Diagramme Client-Serveur](../images/client_serveur.svg)
+![Diagramme Client-Serveur](../resources/client_serveur.svg)
 </details>
 
 ## Coder en PHP
@@ -96,7 +96,7 @@ echo $ma_var;
 echo "Salut c'est $ma_var\n";
 ```
 
-![echo.png](../images/echo.png)
+![echo.png](../resources/echo.png)
 
 ### Debug
 
@@ -107,7 +107,7 @@ $ma_var = [1, 2, 5];
 var_dump($ma_var);
 ```
 
-![var_dump.png](../images/var_dump.png)
+![var_dump.png](../resources/var_dump.png)
 
 ### For each
 

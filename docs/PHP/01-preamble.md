@@ -21,21 +21,29 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 - Protocole HTTP(S)
 - JSON
 - Variables prédéfinies
-- TP : Gérer un formulaire
-- TP : Page de profil utilisateur
+- TD : Gérer un formulaire
+- TD : Page de profil utilisateur
 
-### Séance 3 - Back-end 
+### Séance 3-4 (2 séances) - Back-end 
 
 - Introduction aux concepts d'API
 - TP : Serveur HTTP basique
   - Routing
 
-### Séance 4 - Intéraction base-de-données
+### Séance 6 - Front-end
 
-- Introduction à PDO et au concept d'ORM
-- TP : Requêtes basiques et mini-ORM
+- Introduction de la logique de composants
+- Présentation de diverses technologies front-end
+- TP : Moteur de templating
 
-### Séance 5 - Introduction à la sécurité
+### Séance 7-8 (2 séances) - Intéraction base-de-données
+
+- Introduction à PDO
+- TP : Requêtes basiques
+- Introduction au concept d'ORM
+- TP : ORM minimaliste
+
+### Séance 9 - Introduction à la sécurité
 
 - Introduction à la cyber-sécurité (injection SQL, XSS, man in the middle, DDoS)
 - TP : Challenges "root-me" like
@@ -47,7 +55,7 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
   - Decrypt me (medium) -> Décoder du base64
   - MitM (hard) -> Truc style voler un token via wireshark
 
-### Séance 6 - Framework
+### Séance 10 - Framework
 
 - Introduction au concept de framework
 - TP : Créer son propre framework minimaliste en assemblant les parties précédentes
@@ -58,17 +66,17 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
     - Configuration utilisateur (host, port, bdd)
   - Le moins de failles de sécurité possible
 
-### Séance 7 - Laravel 
+### Séance 11 - Laravel 
 
 - Introduction à Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), présentation de la documentation et de l'écosystème
 - Mini exposé : Chaque élève présente un élément de l'écosystème Laravel (description, exemples d'usage, complexité, popularité, prix, fiabilité)
 - Introduction au concept de package manager et composer
 - TP : Création d'un projet Laravel vide
 
-### Séance 8-15 (7 séances) - Projet noté
+### Séance 11-18 (7 séances) - Projet noté
 
 - Introduction du sujet du Projet
-  - "Création d'une application de gestion de projet informatique et de tickting"
+  - "Création d'une application de gestion de projet informatique et de ticketing"
   - Seul ou en duo
   - Rendu sur GitHub et Dockerhub
   - Description de cas d'usages :

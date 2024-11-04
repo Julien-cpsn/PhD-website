@@ -16,12 +16,12 @@ In this course, we will explore the typical architecture of a web application by
 
 Here is a diagram to facilitate understanding throughout the explanation:
 
-![WEB stack diagram](../images/web_stack.svg)
+![WEB stack diagram](../resources/web_stack.svg)
 
 <details>
     <summary>More detailed version</summary>
 
-![WEB stack diagram with details](../images/web_stack_detailed.svg)
+![WEB stack diagram with details](../resources/web_stack_detailed.svg)
 </details>
 
 :::tip In analogy 🥖

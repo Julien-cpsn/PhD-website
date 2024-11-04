@@ -37,4 +37,4 @@ Ce type de requête renverrait des informations sur l'utilisateur avec l'ID 42.
 
 Il est aussi possible de représenter une API REST sous forme d'arbre, tel que voici :
 
-![rest_api.png](../images/rest_api.png)
+![rest_api.png](../resources/rest_api.png)
