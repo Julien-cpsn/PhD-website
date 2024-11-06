@@ -1,7 +1,7 @@
 const execSync = require('child_process').execSync;
 
 const hostname = "localhost"
-const port = 3002
+const port = 3001
 
 let pdf_files = require('./pdf_files.json')
 
