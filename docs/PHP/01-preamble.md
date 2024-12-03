@@ -30,20 +30,20 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 - TP : Serveur HTTP basique
   - Routing
 
-### Séance 6 - Front-end
+### Séance 5 - Front-end
 
 - Introduction de la logique de composants
 - Présentation de diverses technologies front-end
 - TP : Moteur de templating
 
-### Séance 7-8 (2 séances) - Intéraction base-de-données
+### Séance 6-7 (2 séances) - Intéraction base-de-données
 
 - Introduction à PDO
 - TP : Requêtes basiques
 - Introduction au concept d'ORM
 - TP : ORM minimaliste
 
-### Séance 9 - Introduction à la sécurité
+### Séance 8 - Introduction à la sécurité
 
 - Introduction à la cyber-sécurité (injection SQL, XSS, man in the middle, DDoS)
 - TP : Challenges "root-me" like
@@ -55,7 +55,7 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
   - Decrypt me (medium) -> Décoder du base64
   - MitM (hard) -> Truc style voler un token via wireshark
 
-### Séance 10 - Framework
+### Séance 9 - Framework
 
 - Introduction au concept de framework
 - TP : Créer son propre framework minimaliste en assemblant les parties précédentes
@@ -66,7 +66,7 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
     - Configuration utilisateur (host, port, bdd)
   - Le moins de failles de sécurité possible
 
-### Séance 11 - Laravel 
+### Séance 10 - Laravel 
 
 - Introduction à Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), présentation de la documentation et de l'écosystème
 - Mini exposé : Chaque élève présente un élément de l'écosystème Laravel (description, exemples d'usage, complexité, popularité, prix, fiabilité)
