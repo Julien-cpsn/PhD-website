@@ -51,8 +51,6 @@ php artisan serve
 ```
 Votre application est accessible à l'adresse : `http://localhost:8000`.
 
----
-
 ## Structure d’un Projet Laravel
 
 Laravel organise le code selon une architecture claire. Voici les répertoires principaux :

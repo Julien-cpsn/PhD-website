@@ -68,28 +68,12 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 
 ### Séance 10 - Laravel 
 
-- Introduction à Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), présentation de la documentation et de l'écosystème
 - Mini exposé : Chaque élève présente un élément de l'écosystème Laravel (description, exemples d'usage, complexité, popularité, prix, fiabilité)
 - Introduction au concept de package manager et composer
+- Introduction à Laravel (routing, controllers, requests/responses, validation, migrations, seeding, commands, jobs), présentation de la documentation et de l'écosystème
 - TP : Création d'un projet Laravel vide
 
-### Séance 11-18 (7 séances) - Projet noté
-
-- Introduction du sujet du Projet
-  - "Création d'une application de gestion de projet informatique et de ticketing"
-  - Seul ou en duo
-  - Rendu sur GitHub et Dockerhub
-  - Description de cas d'usages :
-    - Le développeur et l'admin peuvent créer une application. Seul l'admin peut supprimer une application
-      - L'application est liée à plusieurs utilisateurs, possède un nom, une description et un état (en développement, en test, déployée, en maintenance)
-    - Les utilisateurs peuvent créer des tickets pour une application, seulement l'admin peut supprimer un ticket
-      - Un ticket possède un titre, une description et un état (non résolu, résolu)
-    - L'utilisateur et le développeur ne voient que les applications auxquelles ils sont affectés et leurs tickets. L'admin voit tout
-  - Features attendues :
-    - Authentification (Breeze)
-    - 3 rôles, admin, développeur, utilisateur (laravel-permissions)
-    - Recherche full-text pour les projets/tickets (Scout)
-    - Reporting journalier des tickets au format CSV (task scheduling + job + file storage)
+### Séance 11-20 (10 séances) - Projet noté
 
 ## Objectifs pédagogiques
 
