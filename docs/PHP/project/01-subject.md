@@ -19,6 +19,7 @@ Ce projet vise à développer un réseau social pour les sportifs.
 - Le feed contiendra :
   - Les évènements à venir
   - Les résultats des matchs passés
+  - Les posts des utilisateurs
 - Les types d'évènements sont :
   - Tournois (lié à des teams)
   - Entrainement (lié à des joueurs)
