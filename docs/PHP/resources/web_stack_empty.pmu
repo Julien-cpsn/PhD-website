@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+skinparam defaultTextAlignment center
+
+actor "Client" as c1
+
+agent "          \n       /        /      " as f1
+
+agent "          \nPHP / Java / Go / Rust" as b1
+
+agent "               \nPostGreSQL / MySQL / MongoDB" as db1
+
+c1 -> f1: "                   "
+f1 -> b1: "                   "
+b1 -> db1: "                   "
+f1 .u.> c1: "                   "
+b1 .u.> f1: "                   "
+db1 .u.> b1: "                   "
+@enduml
