@@ -1,0 +1,45 @@
+@startuml
+top to bottom direction
+
+card "Maison de l'utilisateur" as user_home #0000ff15;line:blue;line.dashed;text:blue {
+actor "Utilisateur" as user
+folder "**PC avec un navigateur Web**\n              158.78.235.6" as browser
+}
+
+cloud "Internet" as internet
+
+cloud "Entreprise" as company #ff000015;line:red;text:red {
+hexagon "**Répartisseur de charge**\n        (Load balancer)\n             10.3.15.5" as lb
+
+node "Serveur physique 1" as sp1 {
+    card "Serveur Applicatif" as sa1 {
+        rectangle "**API REST**\n10.3.17.20" as api1
+    }
+    database "**Base de Données**\n      10.3.17.50" as db1
+}
+
+node "Serveur physique 2" as sp2 {
+    card "Serveur Applicatif" as sa2 {
+        rectangle "**API REST**\n10.3.17.21" as api2
+    }
+    database "**Base de Données**\n      10.3.17.51" as db2
+}
+}
+
+user -down-> browser
+browser ---> internet
+internet ---> lb
+lb ---> api1
+lb ---> api2
+api1 -down-> db1
+api2 -down-> db2
+
+db1 -up-> api1
+db2 -up-> api2
+api1 ---> lb
+api2 ---> lb
+lb ---> internet
+internet ---> browser
+browser --> user
+
+@enduml

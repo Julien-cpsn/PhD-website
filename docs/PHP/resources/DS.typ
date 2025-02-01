@@ -146,6 +146,16 @@
 )
 
 
+#show raw.where(block: true, lang: "php"): code => {
+  show raw.line: line => {
+    text(fill: gray)[#line.number]
+    h(1em)
+    line.body
+  }
+  code
+}
+
+
 #align(
     center,
     [
@@ -237,16 +247,16 @@
 #v(10pt)
 
 #context[
-    #total_points.update(n => n + 2)
-    === Question #question_counter.display() – Décrire le contenu des superglobales/variables prédéfinies suivantes #h(1fr) /3
+    #total_points.update(n => n + 4)
+    === Question #question_counter.display() – Décrire le contenu des superglobales/variables prédéfinies suivantes #h(1fr) /4
     #v(10pt)
 
     #grid(
         columns: (1fr, 2fr),
         align: center,
         stack(
-            spacing: 19pt,
-            [\$GLOBALS],
+            spacing: 18.5pt,
+            [#v(5pt)\$GLOBALS],
             [\$\_SERVER],
             [\$\_GET],
             [\$\_POST],
@@ -256,7 +266,7 @@
             [\$\_REQUEST],
             [\$\_ENV],
             [\$argc],
-            [\$arv],
+            [\$argv],
         ),
         stack(
             box[#rect(width: 100%, height: 25pt)],
@@ -275,8 +285,38 @@
 ]
 
 #q(
+    question: [Qu'est-ce que permet de tester le regex suivant ? ~ ~#strong(delta: -250)[```js /^[\w\-\.]+@[a-z]+\.[a-z]{2,4}$/```]
+    ],
+    points: 1
+)
+
+#q(
+    question: [Quelles remarques pouvez-vous faire sur le code PHP suivant ? (1 point pour le détail)
+
+    #strong(delta: -250)[```php
+    <?php
+    $pdo = new PDO("mysql:host=localhost;dbname=testdb", "user", "password");
+
+    $username = $_GET['username'];
+    $query = "SELECT * FROM users WHERE username = '$username'";
+
+    $result = $pdo->query($query);
+
+    foreach ($result as $row) {
+        echo "User: " . $row['username'] . "<br>";
+    }
+    ?>
+    ```
+    ]
+    ],
+    points: 3
+)
+
+#separator_counter.update(0)
+
+#q(
     question: [
-        Qu'est-ce qu'il va se passer si j'effectue la requête suivante sur le code ci-dessous ?
+        Qu'est-ce qu'il va se passer si j'effectue la requête suivante sur le code ci-dessous ? (2 points pour le détail)
 
 
         #strong(delta: -250, [
@@ -287,7 +327,7 @@
         Content-Type: application/x-www-form-urlencoded
         Content-Length: 13
 
-        say=Hi&to=Mom
+        username=IUT&mail=mon@super.mail&nationality=italien&password=mon_super_mdp
         ```
 
         ```php
@@ -325,7 +365,7 @@
         ```
         ])
     ],
-    points: 2
+    points: 3
 )
 
 #pagebreak()
@@ -368,6 +408,45 @@
     ),
     points: 1
 )
+
+#separator_counter.update(0)
+
+#picture(
+    question: [
+        Numérotez l'ordre de communication entre les différents éléments du schéma pour la requête HTTP suivante
+
+        #strong(delta: -250)[
+
+        La requête ci-dessous est celle interceptée au premier passage dans le load balancer.
+        ```http
+        GET /products/69 HTTP/1.1
+        Host: www.entreprise.com
+        User-Agent: Mozilla/5.0
+        Accept: application/json
+        X-Target-Server: backend-server-1
+        X-Forwarded-For: 158.78.235.6
+        ```
+        ]
+    ],
+    picture: image("web_transaction.svg", width: 85%),
+    points: 3
+)
+
+
+#question_counter.step()
+#separator_counter.step()
+
+#context[
+    #line(start: (15%, 0%), end: (85%, 0%), stroke: gray)
+    #v(5pt)
+
+    #total_points.update(n => n + 4)
+    === Question #question_counter.display() – Quelle est la différence entre le rendu côté client (client-side rendering, CSR) et le rendu côté serveur (server-side rendering, SSR) ? Quels sont les avantages et inconvénients de chaque approche ?#h(1fr) /4
+    #align(
+        center,
+        rect(width: 100%, height: 170pt)
+    )
+]
 
 #pagebreak()
 == #underline[Partie 3 – HTTP & API]
@@ -416,7 +495,7 @@
 )
 
 #qcm(
-    question: "Quelles méthodes standardes existent dans le protocole HTTP ?",
+    question: "Quelles méthodes standards existent dans le protocole HTTP ?",
     choices: (
         "GET",
         "LOGIN",
@@ -428,8 +507,12 @@
     points: 1
 )
 
+#separator_counter.update(0)
+
 #q(
     question: [Ici, un simple échange entre un client (requête) et un serveur (réponse). Est-ce que la réponse du serveur semble appropriée ?
+
+        #strong(delta: -250)[
         #grid(
             columns: (1fr, 1fr),
             align: center + horizon,
@@ -457,6 +540,28 @@
                 ```
             ]
         )
+        ]
     ],
     points: 2
 )
+
+== #underline[Partie 4 – Framework et autres technologies]
+#separator_counter.update(0)
+
+#question_counter.step()
+#separator_counter.step()
+#v(10pt)
+
+#context[
+    #if (separator_counter.get() > (1,)) [
+        #line(start: (15%, 0%), end: (85%, 0%), stroke: gray)
+        #v(5pt)
+    ]
+
+    #total_points.update(n => n + 4)
+    === Question #question_counter.display() – Dans le futur, qu'est-ce qui pourrait vous permettre de comparer et choisir des technologies ? (framework, langage, bibliothèque, ...)#h(1fr) /4
+    #align(
+        center,
+        rect(width: 100%, height: 300pt)
+    )
+]
