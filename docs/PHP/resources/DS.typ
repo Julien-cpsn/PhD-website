@@ -569,7 +569,19 @@
 #separator_counter.update(0)
 #pagebreak()
 
-PAGE BONUS
+#align(
+    center,
+    [PAGE BONUS]
+)
+
+#picture(
+    question: [Remplissez le schéma suivant représentant un échange TCP
+
+        #strong(delta: -250)[Les instructions possibles sont : SYN, ACK, SEQ, DATA, FIN]
+    ],
+    picture: image("TCP-connection-sequence-diagram.png", width: 70%),
+    points: 2
+)
 
 #q(
     question: "Comment fonctionne le système de migrations dans Laravel, et quels sont ses avantages par rapport à la gestion manuelle des bases de données ?",
@@ -579,3 +591,5 @@ PAGE BONUS
     question: "Comment fonctionnent les composants Blade dans Laravel, et dans quels cas est-il préférable de les utiliser par rapport aux vues classiques ?",
     points: 1
 )
+
+#total_points.update(n => n - 4)
