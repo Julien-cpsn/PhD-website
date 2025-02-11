@@ -140,7 +140,7 @@
 ]
 
 #show raw.where(block: true): block.with(
-  fill: luma(245),
+  fill: luma(235),
   inset: 10pt,
   radius: 4pt,
 )
@@ -375,8 +375,8 @@
 #separator_counter.update(0)
 
 #picture(
-    question: "Remplissez le schéma suivant représentant une stack web",
-    picture: image("web_stack_empty.svg"),
+    question: "Remplissez le schéma suivant représentant une stack web (avec les communications)",
+    picture: image("web_stack_empty.png"),
     points: 2
 )
 
@@ -428,7 +428,7 @@
         ```
         ]
     ],
-    picture: image("web_transaction.svg", width: 85%),
+    picture: image("web_transaction.png", width: 85%),
     points: 3
 )
 
@@ -559,9 +559,23 @@
     ]
 
     #total_points.update(n => n + 4)
-    === Question #question_counter.display() – Dans le futur, qu'est-ce qui pourrait vous permettre de comparer et choisir des technologies ? (framework, langage, bibliothèque, ...)#h(1fr) /4
+    === Question #question_counter.display() – Dans le futur, quels éléments pourraient vous permettre de comparer et choisir des technologies ? (framework, langage, bibliothèque, ...)#h(1fr) /4
     #align(
         center,
         rect(width: 100%, height: 300pt)
     )
 ]
+
+#separator_counter.update(0)
+#pagebreak()
+
+PAGE BONUS
+
+#q(
+    question: "Comment fonctionne le système de migrations dans Laravel, et quels sont ses avantages par rapport à la gestion manuelle des bases de données ?",
+    points: 1
+)
+#q(
+    question: "Comment fonctionnent les composants Blade dans Laravel, et dans quels cas est-il préférable de les utiliser par rapport aux vues classiques ?",
+    points: 1
+)
