@@ -8,7 +8,7 @@ function getPublications() {
 
     useEffect(() => {
         async function retrievePublications() {
-            const text = await fetch("http://julien-cpsn.com:3005/?username=Julien%20Caposiena").then(r => r.text())
+            const text = await fetch("https://publications-rss.julien-cpsn.com/?username=Julien%20Caposiena").then(r => r.text())
             console.log(text)
             const xmlDoc = new DOMParser().parseFromString(text, "text/xml")
             const local_items = Array.from(xmlDoc.querySelectorAll("item")).map(item => ({
