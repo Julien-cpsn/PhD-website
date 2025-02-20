@@ -114,6 +114,11 @@ const config = {
             position: 'left'
           },
           {
+            to: '/publications',
+            label: 'Publications',
+            position: 'left'
+          },
+          {
             to: '/cv',
             label: 'Curriculum Vitae',
             position: 'left'
@@ -166,6 +171,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+              {
+                label: 'Publications',
+                to: '/publications',
               },
               {
                 label: 'Curriculum Vitae',
