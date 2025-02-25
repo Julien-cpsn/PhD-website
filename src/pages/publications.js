@@ -22,6 +22,7 @@ function getPublications() {
                     url: "https://" + item.querySelector("source").attributes['url'].value
                 },
                 link: item.querySelector("link").childNodes[0].data,
+                pdf_link: item.querySelector("enclosure")?.attributes['url'].value,
             }))
 
             setItems(local_items)
@@ -37,11 +38,16 @@ function getPublications() {
             {items.length === 0 && <p>Loading...</p>}
             {items.map((item, index) => (
                 <div key={item.title}>
-                    <h3><a href={item.link} target="_blank">{item.title}</a></h3>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                        <h3><a href={item.link} target="_blank">{item.title}</a></h3>
+                        { item.pdf_link &&
+                            <a href={item.pdf_link} target="_blank">[PDF]</a>
+                        }
+                    </div>
                     <div style={{ opacity: "50%" }}>{ item.author } - { item.description } - { item.pubDate } - <a href={item.source.url} target="_blank">{ item.source.name }</a></div>
                     <div>{ item.content }</div>
                     { index !== items.length-1 &&
-                        <hr/>
+                        <hr style={{ opacity: "0.25" }}/>
                     }
                 </div>
             ))}
