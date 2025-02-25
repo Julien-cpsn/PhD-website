@@ -1,6 +1,6 @@
 import Layout from '@theme/Layout';
 import React, {useEffect, useState} from "react";
-import "../css/index.css"
+import "../css/publications.css"
 
 function getPublications() {
     const [items, setItems] = useState([]);
@@ -44,7 +44,12 @@ function getPublications() {
                             <a href={item.pdf_link} target="_blank">[PDF]</a>
                         }
                     </div>
-                    <div style={{ opacity: "50%" }}>{ item.author } - { item.description } - { item.pubDate } - <a href={item.source.url} target="_blank">{ item.source.name }</a></div>
+                    <div style={{ opacity: "50%" }}>
+                        <span>{ item.author }&nbsp;-&nbsp;</span>
+                        <span>{ item.description }&nbsp;-&nbsp;</span>
+                        <span>{ item.pubDate }&nbsp;-&nbsp;</span>
+                        <span><a href={item.source.url} target="_blank">{ item.source.name }</a></span>
+                    </div>
                     <div>{ item.content }</div>
                     { index !== items.length-1 &&
                         <hr style={{ opacity: "0.25" }}/>
@@ -61,7 +66,7 @@ export default function Publications() {
             title="Publications"
             description="Scientific publications">
             <main className="main-page">
-                <div style={{ width: "80%", marginLeft: "auto", marginRight: "auto", marginTop: "50px", marginBottom: "50px" }}>
+                <div className="content">
                     {getPublications()}
                 </div>
             </main>
