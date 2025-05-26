@@ -73,7 +73,7 @@ export default function Home() {
                         title="Towards a flexible Network Operating System Testbed for the Computing Continuum"
                         description="In recent years, emerging computing paradigms have paved the way for the development of the Computing Continuum, a concept that enables applications to efficiently allocate geo-distributed resources across the network. Despite its potential, fully realizing the Computing Continuum remains a challenge due to the lack of suitable research infrastructures that support experimentation at scale."
                         image={Ccgrid2025}
-                        href="/blog/a-pipeline-for-human-robot-spoken-interaction-in-collaborative-scenarios"
+                        href="/blog/towards-a-flexible-network-operating-system-testbed-for-the-computing-continuum"
                     />
 
                     <Card
