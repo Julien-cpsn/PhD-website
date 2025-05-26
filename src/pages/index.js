@@ -3,8 +3,10 @@ import Translate, {translate} from "@docusaurus/Translate";
 import Card from "@site/static/js/card";
 import CardColumn from "../../static/js/card-column";
 import React from "react";
+import Retos from "@site/static/img/retos.png"
 import AtacDemo from "@site/static/img/atac_demo.gif"
 import SeratoDemo from "@site/static/img/serato_demo.png"
+import Ccgrid2025 from "@site/static/img/ccgrid2025.png"
 import LaSapienza from "@site/static/img/la_sapienza.png"
 import PHP from "@site/static/img/php.png"
 import "../../src/css/index.css"
@@ -68,6 +70,13 @@ export default function Home() {
 
                 <CardColumn title={translate({message: "Mes publications"})}>
                     <Card
+                        title="Towards a flexible Network Operating System Testbed for the Computing Continuum"
+                        description="In recent years, emerging computing paradigms have paved the way for the development of the Computing Continuum, a concept that enables applications to efficiently allocate geo-distributed resources across the network. Despite its potential, fully realizing the Computing Continuum remains a challenge due to the lack of suitable research infrastructures that support experimentation at scale."
+                        image={Ccgrid2025}
+                        href="/blog/towards-a-flexible-network-operating-system-testbed-for-the-computing-continuum"
+                    />
+
+                    <Card
                         title="Un pipeline pour l'interaction parlée entre l'homme et le robot dans des scénarios collaboratifs"
                         description="Dans le contexte de la robotique collaborative, les robots partagent l'espace de travail avec les humains et la communication entre les deux parties est de la plus haute importance."
                         image={LaSapienza}
@@ -82,6 +91,14 @@ export default function Home() {
                         image={AtacDemo}
                         href="https://github.com/Julien-cpsn/ATAC"
                     />
+
+                    <Card
+                        title="RetOS"
+                        description="RetOS est le système d'exploitation développé pendant ma thèse. Il vise à améliorer la transition de paquets au sein du réseau."
+                        image={Retos}
+                        href="https://github.com/Julien-cpsn/RetOS"
+                    />
+
                     <Card
                         title="Now Playing Serato"
                         description="Ceci est un petit script pour afficher les pistes en cours de lecture du logiciel Serato DJ."
