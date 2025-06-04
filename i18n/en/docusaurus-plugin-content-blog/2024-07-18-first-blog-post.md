@@ -3,7 +3,6 @@ slug: first-blog-post
 title: First post
 authors:
   julien
-tags: [publication]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 

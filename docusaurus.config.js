@@ -129,10 +129,25 @@ const config = {
             queryString: '?persistLocale=true'
           },
           {
+            href: 'https://phd.julien-cpsn.com/blog/rss.xml',
+            position: 'right',
+            className: 'rss-link blog-rss',
+            'aria-label': 'Blog RSS',
+            target: '_blank'
+          },
+          {
+            href: 'https://publications-rss.julien-cpsn.com/?username=Julien%20Caposiena',
+            position: 'right',
+            className: 'rss-link publications-rss',
+            'aria-label': 'Publications RSS',
+            target: '_blank'
+          },
+          {
             href: 'https://github.com/Julien-cpsn/',
             position: 'right',
             className: 'github-link',
             'aria-label': 'Profil GitHub',
+            target: '_blank'
           },
         ],
       },

@@ -3,7 +3,7 @@ slug: a-pipeline-for-human-robot-spoken-interaction-in-collaborative-scenarios
 title: Un pipeline pour l'interaction parlée entre l'homme et le robot dans des scénarios collaboratifs
 authors:
   julien
-tags: [publication]
+tags: [scientific-article]
 ---
 
 **Abstract :**

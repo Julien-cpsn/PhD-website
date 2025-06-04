@@ -1,4 +1,4 @@
-publication:
-  label: Publication
-  permalink: /publications
-  description: Mes publications
+scientific-article:
+  label: Article scientifique
+  permalink: /scientific-article
+  description: Mes articles scientifique
