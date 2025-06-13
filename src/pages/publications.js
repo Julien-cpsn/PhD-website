@@ -19,7 +19,16 @@ function getPublications() {
                 pubDate: item.querySelector("pubDate").childNodes[0].data,
                 source: {
                     name: item.querySelector("source").childNodes[0].data,
-                    url: "https://" + item.querySelector("source").attributes['url'].value
+                    url: (() => {
+                        const url = item.querySelector("source").attributes['url'].value.trim()
+
+                        if (url.startsWith("https://")) {
+                            return url
+                        }
+                        else {
+                            return 'https://' + url
+                        }
+                    })()
                 },
                 link: item.querySelector("link").childNodes[0].data,
                 pdf_link: item.querySelector("enclosure")?.attributes['url'].value,
