@@ -6,6 +6,7 @@
 
 import {themes as prismThemes} from 'prism-react-renderer';
 import {PluginOptions} from "@easyops-cn/docusaurus-search-local";
+import citation from "./src/remark/citation";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -76,7 +77,8 @@ const config = {
                 ...rest,
               });
             },
-          }
+          },
+          remarkPlugins: [citation]
         },
         theme: {
           customCss: './src/css/custom.scss',

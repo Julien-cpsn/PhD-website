@@ -24,6 +24,7 @@
     "@easyops-cn/docusaurus-search-local": "^0.44.3",
     "@mdx-js/react": "^3.0.0",
     "@saucelabs/theme-github-codeblock": "^0.2.3",
+    "biblatex-csl-converter": "^3.2.2",
     "clsx": "^2.0.0",
     "docs-to-pdf": "^0.6.2",
     "docusaurus-graph": "^1.1.0",
