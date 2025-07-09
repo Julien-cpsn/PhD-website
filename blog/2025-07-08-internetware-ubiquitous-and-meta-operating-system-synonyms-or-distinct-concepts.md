@@ -29,7 +29,23 @@ Emerging research has proposed new classes of operating systems to support perva
 ## Terminology: Synonyms or Distinct Concepts?
 
 As shown in Figure 1, these terms overlap but are not strict synonyms. All three describe OS paradigms beyond traditional desktop/server OSs, but with different emphases. "Ubiquitous OS" is the broadest label – it includes any OS running on any object in a pervasive computing world. In contrast, "Internetware OS" comes from a specific research field, emphasizing Internet-scale autonomic apps. It is essentially treated as one kind of Ubiquitous OS. "Meta OS" is conceptually orthogonal: it refers to OS layers for integrating heterogeneous platforms, regardless of whether the domain is Internetware or ubiquitous computing. For example, ROS is both an Internetware OS example and a Meta OS example. In practice, the literature tends to use these terms to reflect focus rather than strict taxonomy. Some authors group them, but more often they highlight differences: Internetware OSs handle large-scale adaptability, UOSs handle device-pervasion and context, and Meta OSs handle cross-layer coordination. Thus, while related, each term has its own flavor and typical use in research.
+
 <figure>
 <p>![](./images/venn-diagramm-os.svg)</p>
 <figcaption><p>Conceptual relationships among Ubiquitous, Internetware, and Meta Operating Systems</p></figcaption>
 </figure>
+
+## To sum up
+
+| **Aspect**                | **_Ubiquitous OS_**                                           | **_Internetware OS_**                                                                | **_Meta OS_**                                                                                |
+|---------------------------|---------------------------------------------------------------|--------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| **Architectural Model**   | Distributed, context-aware, service-oriented architecture     | Adaptive middleware layered over the Internet; loosely coupled                       | Meta-layer over OSs and platforms; virtualization and orchestration across domains           |
+| **Execution Substrate**   | Device-centric, often embedded or mobile nodes                | Internet-scale nodes; clients/servers/middleware                                     | Cloud–edge–device continuum; abstracted compute fabrics                                      |
+| **Resource Abstraction**  | Limited or tailored to context (e.g., sensors, devices)       | Application-driven resource model; some runtime adaptation                           | Global resource abstraction; unified interface over heterogeneous platforms                  |
+| **Context-awareness**     | High; key feature enabling adaptation and proactivity         | Moderate; focused on adaptability to network dynamics                                | Partial; focuses more on abstraction than sensing or reacting to context                     |
+| **Autonomy / Adaptivity** | High autonomy and adaptation to user/environment              | Emphasizes adaptivity through decentralized cooperation                              | Variable; coordination and control often centralized or hierarchical                         |
+| **Functional Goals**      | Seamless user experience in pervasive environments            | Tolerance to evolution, openness, cooperation, and unpredictable interactions        | Unified access, orchestration, and dynamic integration of resources across environments      |
+| **Target Applications**   | Smart homes, ambient intelligence, mobile computing           | Open distributed applications (e.g., P2P, collaborative systems, web-scale services) | Multi-cloud management, federated infrastructure, global-scale orchestration                 |
+| **Relation to Others**    | Conceptual superset                                           | Subtype focused on the Internet-centric aspect                                       | Orthogonal; intersects both but not fully contained                                          |
+| **Academic Lineage**      | Rooted in Weiser’s ubiquitous computing vision; OS as enabler | Emerged in Chinese software engineering research; OS as Internet-aware middleware    | Draws from cloud computing, grid computing, and autonomic systems; OS as meta-operator       |
+| **Maturity**              | Prototypical systems (e.g., Gaia, Aura); conceptually mature  | Primarily academic, with frameworks but limited real-world deployments               | Emerging interest; tools exist (e.g., Kubernetes-based stacks), but concept not standardized |
