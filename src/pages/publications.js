@@ -11,28 +11,30 @@ function getPublications() {
             const text = await fetch("https://publications-rss.julien-cpsn.com/?username=Julien%20Caposiena").then(r => r.text())
 
             const xmlDoc = new DOMParser().parseFromString(text, "text/xml")
-            const local_items = Array.from(xmlDoc.querySelectorAll("item")).map(item => ({
-                title: item.querySelector("title").textContent,
-                author: item.querySelector("author").childNodes[0].data,
-                content: item.querySelector("encoded").childNodes[0].data,
-                description: item.querySelector("description")?.childNodes[0].data,
-                pubDate: item.querySelector("pubDate").childNodes[0].data,
-                source: {
-                    name: item.querySelector("source").childNodes[0].data,
-                    url: (() => {
-                        const url = item.querySelector("source").attributes['url'].value.trim()
+            const local_items = Array.from(xmlDoc.querySelectorAll("item"))
+                .filter((item) => item.querySelector("pubDate") !== null)
+                .map(item => ({
+                    title: item.querySelector("title").textContent,
+                    author: item.querySelector("author").childNodes[0].data,
+                    content: item.querySelector("encoded").childNodes[0].data,
+                    description: item.querySelector("description")?.childNodes[0].data,
+                    pubDate: item.querySelector("pubDate").childNodes[0].data,
+                    source: {
+                        name: item.querySelector("source").childNodes[0].data,
+                        url: (() => {
+                            const url = item.querySelector("source").attributes['url'].value.trim()
 
-                        if (url.startsWith("https://")) {
-                            return url
-                        }
-                        else {
-                            return 'https://' + url
-                        }
-                    })()
-                },
-                link: item.querySelector("link").childNodes[0].data,
-                pdf_link: item.querySelector("enclosure")?.attributes['url'].value,
-            }))
+                            if (url.startsWith("https://")) {
+                                return url
+                            }
+                            else {
+                                return 'https://' + url
+                            }
+                        })()
+                    },
+                    link: item.querySelector("link").childNodes[0].data,
+                    pdf_link: item.querySelector("enclosure")?.attributes['url'].value,
+                }))
 
             setItems(local_items)
         }
