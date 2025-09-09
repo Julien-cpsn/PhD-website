@@ -47,13 +47,6 @@ Ce cours vise à enseigner le langage de programme PHP et le framework Laravel a
 
 - Introduction à la cyber-sécurité (injection SQL, XSS, man in the middle, DDoS)
 - TP : Challenges "root-me" like
-  - Tag (simple) -> mdp dans une balise
-  - Guess the password (simple) -> le mdp c'est "admin"
-  - All Routes Lead To Rome (simple) -> trouver mdp dans le fichier "Rome" grâce à l'URL `http://monserv/get_file?filename=../../Rome`
-  - Botox injection (medium) -> Injection SQL
-  - XSS (medium)  -> Attaque XSS
-  - Decrypt me (medium) -> Décoder du base64
-  - MitM (hard) -> Truc style voler un token via wireshark
 
 ### Séance 9 - Framework
 
