@@ -5,10 +5,6 @@
   number-align: right + bottom
 )
 
-#set text(
-  font: "Arial",
-)
-
 #show link: underline
 
 #let infinite = text(size: 18pt, box[#v(-7pt)∞#v(-4pt)])
@@ -38,12 +34,12 @@
 
 #let question_format(question: str, points: float, question_stack: array) = block(width: 100%)[
     #question_counter.step()
-    #v(10pt)
+    #v(5pt)
 
     #context[
     #if (question_counter.get() > (1,)) [
         #line(start: (15%, 0%), end: (85%, 0%), stroke: gray)
-        #v(5pt)
+        #v(0pt)
     ]
 
     #total_points.update(n => n + points)
@@ -66,7 +62,7 @@
 
   let radios_stack = stack(
       dir: ttb,
-      spacing: 10pt,
+      spacing: 7pt,
       ..radios
     )
 
@@ -99,19 +95,19 @@
 
 #let q(question: content, points: float) = [
     #question_counter.step()
-    #v(10pt)
+    #v(5pt)
 
     #context[
         #if (question_counter.get() > (1,)) [
             #line(start: (15%, 0%), end: (85%, 0%), stroke: gray)
-            #v(5pt)
+            #v(0pt)
         ]
 
         #total_points.update(n => n + points)
         === Question #question_counter.display() – #question #h(1fr) /#points
         #align(
             center,
-            rect(width: 100%, height: 25pt)
+            rect(width: 100%, height: 30pt)
         )
     ]
 ]
@@ -121,21 +117,20 @@
     [
         = QCM 2 – Développement WEB – BUT2 DACS
 
-        Julien CAPOSIENA
     ]
 )
 
-#v(15pt)
+#v(10pt)
 
 #grid(
-    columns: (1fr, 220pt, 220pt, 1fr),
+    columns: (1fr, 230pt, 230pt, 1fr),
     [],
     [
         *Prénom :*
-        #rect(width: 160pt, height: 25pt)
+        #rect(width: 200pt, height: 30pt)
         #v(5pt)
         *NOM :*
-        #rect(width: 160pt, height: 25pt)
+        #rect(width: 200pt, height: 30pt)
     ],
     [
         *Règles :*
@@ -149,14 +144,14 @@
                 ]
             ]
             - *Objectif* : Trouver le bon mot de passe pour chaque question
-            - *URL* : #link("http://julien-cpsn:8010/")[http://julien-cpsn.com:8010/]
+            - *URL* : #link("http://julien-cpsn:8010/")[https://qcm.julien-cpsn.com/]
     ],
     []
 )
 
-#v(15pt)
-#line(start: (-2%, 0%), end: (102%, 0%), stroke: 1pt + black)
 #v(5pt)
+#line(start: (-2%, 0%), end: (102%, 0%), stroke: 1pt + black)
+#v(0pt)
 
 #qcu(
   question: "Lorem Ipsum",
@@ -198,5 +193,10 @@
 
 #q(
   question: [SQL],
+  points: 1
+)
+
+#q(
+  question: [?],
   points: 1
 )

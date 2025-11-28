@@ -207,10 +207,3 @@ Laravel inclut **Artisan**, une interface en ligne de commande pour automatiser 
 - Il favorise les bonnes pratiques de développement grâce à son architecture propre (MVC).
 
 Laravel est un excellent choix pour les développeurs PHP souhaitant gagner en productivité tout en produisant du code maintenable et évolutif. Avec sa syntaxe élégante et sa large communauté, il vous permet de construire des applications modernes en un temps record.
-
-## Petit exercice
-
-- Créer un endpoint/une route `/nom-etudiant` (GET).
-- Le endpoint renverra vers une fonction dans un contrôleur (StudentController).
-- La fonction aura une constante de nom d'étudiant (peu importe le nom) et renverra une page HTML avec ce même nom affiché (via Blade).
-- Faire valider par le professeur.

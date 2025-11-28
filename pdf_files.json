@@ -77,6 +77,17 @@
     "subject": "Séance 8 – Développement WEB PHP – BUT2 DACS"
   },
   {
+    "course": "PHP - Séance 9",
+    "filename": "php-iut-dacs-course-9.pdf",
+    "endpoint": "/PHP/course-9",
+    "cover":  "https://cdn-icons-png.flaticon.com/512/919/919830.png",
+    "title": "Développement WEB PHP - Séance 9",
+    "subtitle": "BUT Informatique parcours DACS",
+    "school": "IUT Lyon 1 – Site de la Doua",
+    "author": "Julien CAPOSIENA",
+    "subject": "Séance 9 – Développement WEB PHP – BUT2 DACS"
+  },
+  {
     "course": "PHP - Projet",
     "filename": "php-iut-dacs-project.pdf",
     "endpoint": "/PHP/project",
