@@ -7,6 +7,7 @@
 
 #set text(
   font: "Arial",
+  size: 10.5pt
 )
 
 #show link: underline
@@ -161,29 +162,29 @@
     [
         = DS – Développement WEB – BUT2 DACS
 
-        12/02/2025
+        09/12/2025
     ]
 )
 
 #v(15pt)
 
 #grid(
-    columns: (1fr, 220pt, 220pt, 1fr),
+    columns: (1fr, 250pt, 250pt, 1fr),
     [],
     [
         *Prénom :*
-        #rect(width: 160pt, height: 25pt)
+        #rect(width: 200pt, height: 25pt)
         #v(5pt)
         *NOM :*
-        #rect(width: 160pt, height: 25pt)
+        #rect(width: 200pt, height: 25pt)
     ],
     [
         *Règles :*
             - #box[#circle(radius: 4pt)] *Question choix unique*
             - #box[#square(size: 7pt)] *Question choix multiple*
-                - Uniquement les bonnes réponses
+                - Avoir uniquement les bonnes réponses donne les points
             - #box[#rect(width: 25pt, height: 10pt)[ ]] *Question libre*
-            - *Temps* : 1h30
+            - *Temps* : 1h40
             - #box[
                 *Points totaux* :
                 #context[
@@ -195,7 +196,7 @@
     []
 )
 
-#v(15pt)
+#v(10pt)
 #line(start: (-2%, 0%), end: (102%, 0%), stroke: 1pt + black)
 #v(5pt)
 
@@ -347,7 +348,12 @@
             }
 
             $nationality = $_POST['nationality'];
-            if (!isset($nationality) || !is_string($nationality) || strlen($nationality) <= 0 || !in_array($nationality, ["Français", "Anglais", "Italien"])) {
+            if (
+                !isset($nationality) ||
+                !is_string($nationality) ||
+                strlen($nationality) <= 0 ||
+                !in_array($nationality, ["Français", "Anglais", "Italien"])
+            ) {
                 $errors[] = "Erreur sur la nationalité";
             }
 
@@ -507,6 +513,11 @@
     points: 1
 )
 
+#q(
+    question: "Choisir et justifier les routes et méthodes à utiliser pour les parties connexion et inscription à un site",
+    points: 2
+)
+
 #separator_counter.update(0)
 
 #q(
@@ -559,7 +570,8 @@
     ]
 
     #total_points.update(n => n + 4)
-    === Question #question_counter.display() – Dans le futur, quels éléments pourraient vous permettre de comparer et choisir des technologies ? (framework, langage, bibliothèque, ...)#h(1fr) /4
+    === Question #question_counter.display() – Dans le futur, quels éléments pourraient vous permettre de comparer et choisir des technologies ? (framework, langage, bibliothèque, ...) \
+    Merci de ne pas répondre "ChatGPT" #h(1fr) /4
     #align(
         center,
         rect(width: 100%, height: 300pt)
@@ -569,9 +581,23 @@
 #separator_counter.update(0)
 #pagebreak()
 
+#q(
+    question: "Comment fonctionne le système de migrations dans Laravel, et quels sont ses avantages par rapport à la gestion manuelle des bases de données ?",
+    points: 2
+)
+#q(
+    question: "Comment fonctionnent les composants Blade dans Laravel, et dans quels cas est-il préférable de les utiliser par rapport aux vues classiques ?",
+    points: 1
+)
+
+#v(15pt)
+#line(start: (15%, 0%), end: (85%, 0%), stroke: gray)
+
+#separator_counter.update(0)
+
 #align(
     center,
-    [PAGE BONUS]
+    [QUESTION BONUS]
 )
 
 #picture(
@@ -583,13 +609,4 @@
     points: 2
 )
 
-#q(
-    question: "Comment fonctionne le système de migrations dans Laravel, et quels sont ses avantages par rapport à la gestion manuelle des bases de données ?",
-    points: 1
-)
-#q(
-    question: "Comment fonctionnent les composants Blade dans Laravel, et dans quels cas est-il préférable de les utiliser par rapport aux vues classiques ?",
-    points: 1
-)
-
-#total_points.update(n => n - 4)
+#total_points.update(n => n - 2)
