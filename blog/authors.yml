@@ -1,5 +1,7 @@
 julien:
   name: Julien CAPOSIENA
-  title: Doctorant à l'INSA Lyon
-  url: https://github.com/Julien-cpsn
+  title: PhD student at INSA Lyon
   image_url: https://avatars.githubusercontent.com/u/64107022
+  socials:
+    linkedin: julien-caposiena
+    github: julien-cpsn

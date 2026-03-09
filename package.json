@@ -30,6 +30,7 @@
     "docusaurus-graph": "^1.1.0",
     "docusaurus-plugin-image-zoom": "^2.0.0",
     "docusaurus-plugin-sass": "^0.2.5",
+    "docusaurus-theme-github-codeblock": "^2.0.2",
     "moment": "^2.30.1",
     "prism-react-renderer": "^2.3.0",
     "prop-types": "^15.8.1",

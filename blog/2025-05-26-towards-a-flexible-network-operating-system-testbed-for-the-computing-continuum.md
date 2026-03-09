@@ -3,7 +3,7 @@ slug: towards-a-flexible-network-operating-system-testbed-for-the-computing-cont
 title: Towards a flexible Network Operating System Testbed for the Computing Continuum
 authors:
   julien
-tags: [scientific-article]
+tags: [scientific-article, os, network]
 ---
 
 <h1>Towards a flexible Network Operating System Testbed for the

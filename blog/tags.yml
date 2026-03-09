@@ -2,3 +2,13 @@ scientific-article:
   label: Article scientifique
   permalink: /scientific-article
   description: Mes articles scientifique
+
+os:
+  label: Operating System
+  permalink: /os
+  description: Operating system stuff
+
+network:
+  label: Network
+  permalink: /network
+  description: Network stuff

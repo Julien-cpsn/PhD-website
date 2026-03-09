@@ -1,6 +1,7 @@
 ---
 slug: a-router-os-for-ubiquitous-computing-orchestrating-virtual-network-functions-and-control-loops-over-sd-wan
 title: "A Router OS for Ubiquitous Computing: Orchestrating Virtual Network Functions and Control Loops over SD-WAN"
+tags: [scientific-article, os, network, SD-WAN]
 authors:
   julien
 bibliography:

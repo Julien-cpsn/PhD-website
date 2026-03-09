@@ -37,16 +37,22 @@ const config = {
   },
 
   themes: [
-      [
-        require.resolve("@easyops-cn/docusaurus-search-local"),
-        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
-        ({
-          // `hashed` is recommended as long-term-cache of index file is possible.
-          hashed: true,
-          language: ['en', 'fr'],
-          docsRouteBasePath: 'courses'
-        }),
-      ]
+    [
+      require.resolve("docusaurus-theme-github-codeblock"),
+      ({
+        id: "Github-codeblock"
+      })
+    ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        language: ['en', 'fr'],
+        docsRouteBasePath: 'courses'
+      }),
+    ],
   ],
 
   presets: [
@@ -208,7 +214,7 @@ const config = {
       prism: {
         theme: prismThemes.vsDark,
         darkTheme: prismThemes.vsDark,
-        additionalLanguages: ['bash', 'c', 'css', 'csv', 'json', 'php', 'sql', 'http'],
+        additionalLanguages: ['bash', 'c', 'css', 'csv', 'json', 'php', 'sql', 'http', 'nix'],
       },
       zoom: {
         selector: '.markdown img',
@@ -216,7 +222,13 @@ const config = {
           light: 'rgba(215, 215, 215, 0.95)',
           dark: 'rgba(50, 50, 50, 0.95)'
         },
-      },
+        codeblock: {
+          showGithubLink: true,
+          githubLinkLabel: 'View on GitHub',
+          showRunmeLink: false,
+          runmeLinkLabel: 'Checkout via Runme'
+        },
+      }
     }),
 
   plugins: [

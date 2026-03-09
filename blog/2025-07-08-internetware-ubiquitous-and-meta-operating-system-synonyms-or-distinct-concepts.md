@@ -1,6 +1,7 @@
 ---
 slug: internetware-ubiquitous-and-meta-operating-system-synonyms-or-distinct-concepts
 title: "Internetware, Ubiquitous and Meta Operating Systems: Synonyms or Distinct Concepts?"
+tags: [scientific-article, os, network]
 authors:
   julien
 bibliography: bibliographies/wuos.bib
